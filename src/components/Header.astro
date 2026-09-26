@@ -1,0 +1,16 @@
+---
+import Icon from './Icon.astro';
+import profile from '../data/profile.json';
+const links = [['About', '#about'], ['Journey', '#experience'], ['Education', '#education'], ['Works', '#works'], ['Skills', '#skills'], ['Contact', '#contact']];
+---
+<header class="header">
+  <nav class="wrap">
+    <a href="#about" class="brand">haris<span>_</span></a>
+    <div class="nav-links">{links.map(([l, h]) => <a href={h}>{l}</a>)}</div>
+    <div class="nav-actions">
+      <a class="icon-btn" href={profile.social.github} target="_blank" rel="noopener" aria-label="GitHub"><Icon name="github" /></a>
+      <a class="icon-btn" href={profile.social.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn"><Icon name="linkedin" /></a>
+      <a class="resume" href={profile.resume} download>My Resume</a>
+    </div>
+  </nav>
+</header>

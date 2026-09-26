@@ -1,0 +1,34 @@
+[
+  {
+    "period": "2022 — 2026",
+    "sub": "Jun 2022 – Mar 2026",
+    "logo": "/assets/edu-unsia.jpeg",
+    "name": "Asia Cyber University",
+    "degree": "Bachelor's Degree, Computer Science",
+    "desc": [
+      "Graduated cum laude in Informatics with a 3.9 GPA — completed fully online while working full-time as an engineer.",
+      "My focus areas are Data Science, Machine Learning, and Software Engineering, with coursework spanning Cloud Computing, Data Science, and Web Development using MongoDB and JavaScript."
+    ]
+  },
+  {
+    "period": "2022",
+    "sub": "2022 · 3 months",
+    "logo": "/assets/edu-fazztrack.png",
+    "name": "Fazztrack Bootcamp",
+    "degree": "Full-stack JavaScript",
+    "desc": [
+      "A 3-month, full-time bootcamp right after high school that shaped my growth both technically and personally — and led to my first job in tech."
+    ]
+  },
+  {
+    "period": "2018 — 2021",
+    "sub": "2018 – 2021",
+    "logo": "/assets/edu-smk5.jpg",
+    "name": "SMKN 5 Telkom Banda Aceh",
+    "degree": "Computer & Information Sciences",
+    "desc": [
+      "Where it all started. I learned web and mobile development — HTML, CSS, JavaScript, and PHP for the web, and Flutter for mobile apps.",
+      "Along the way I built several real websites, including an online shop and a school profile site."
+    ]
+  }
+]

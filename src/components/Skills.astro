@@ -1,0 +1,47 @@
+---
+import Icon from './Icon.astro';
+import skills from '../data/skills.json';
+import profile from '../data/profile.json';
+const Y = new Date().getFullYear();
+const exp = (since: number) => { const y = Y - since; return y < 1 ? '< 1 year' : `${y}+ year${y > 1 ? 's' : ''}`; };
+const DARK = ['express', 'next', 'langchain'];
+---
+<section id="skills" class="block">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="pill">My Skills</span>
+      <h2>Building Reliable Software</h2>
+      <p>Technologies organized by expertise areas</p>
+    </div>
+    <div class="rails tree">
+      <div class="tree__rule"></div>
+      <div class="tree__grid">
+        {skills.map((g) => (
+          <div class="tree__col reveal">
+            <div class="tree__stem"></div>
+            <div class="tree__cat"><Icon name={g.icon} />{g.name}</div>
+            <div class="tree__stem tree__stem--fade"></div>
+            <div class="tree__list">
+              {g.items.map((s) => (
+                <div class="skill">
+                  <div class="skill__box" tabindex="0">
+                    <div class={`skill__icon${DARK.includes(s.icon) ? ' skill__icon--dark' : ''}`}><img src={`${profile.techCdn}${s.icon}.webp`} alt="" width="22" height="22" loading="lazy" decoding="async" /></div>
+                    <div style="flex:1;min-width:0">
+                      <div class="skill__name">{s.name}</div>
+                      <div class="skill__meta"><span>{s.projects ? `${s.projects} projects` : ''}</span><span>{exp(s.since)}</span></div>
+                    </div>
+                  </div>
+                  <div class="skill__tip" role="tooltip">
+                    <b>{s.name}</b>
+                    <p>{s.description}</p>
+                    <div><span>{exp(s.since)}</span><span>{s.projects ? `${s.projects} projects` : ''}</span></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

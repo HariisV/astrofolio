@@ -1,0 +1,18 @@
+---
+import profile from '../data/profile.json';
+const items = [...profile.companies, ...profile.companies, ...profile.companies, ...profile.companies];
+---
+<section class="companies reveal">
+  <div class="wrap">
+    <p class="companies__label">Companies I’ve worked with &amp; grown alongside as an engineer.</p>
+    <div class="marquee">
+      <div class="marquee__track">
+        {items.map((c, i) => (
+          <div class="marquee__item" aria-hidden={i >= profile.companies.length ? 'true' : undefined}>
+            <img src={c.logo} alt="" width="56" height="56" loading="lazy" decoding="async" /><span>{c.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+{
+  "name": "Haris Wahyudi",
+  "careerStart": 2020,
+  "roles": [
+    "Software Engineer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Full Stack Developer"
+  ],
+  "description": "years of hands-on experience, a strong work ethic, adaptability, and dedication to delivering high-quality results.",
+  "tagline": "I have a passion for problem-solving, which fuels my persistence in overcoming challenges.",
+  "avatar": "/assets/avatar.png",
+  "resume": "/cv/CV - Haris Wahyudi.pdf",
+  "social": {
+    "github": "https://github.com/hariisV",
+    "linkedin": "https://linkedin.com/in/harisw"
+  },
+  "stats": {
+    "projects": 23,
+    "rating": 9.9
+  },
+  "companies": [
+    {
+      "name": "Sustainable Living Lab",
+      "logo": "/assets/sl2-logo.png"
+    },
+    {
+      "name": "Healstation Lab",
+      "logo": "/assets/healstation-owl.png"
+    },
+    {
+      "name": "INCIT",
+      "logo": "/assets/incit-logo.jpeg"
+    },
+    {
+      "name": "Asia Cyber University",
+      "logo": "/assets/edu-unsia.jpeg"
+    }
+  ],
+  "techCdn": "/techstack/",
+  "projectCdn": "/projects/"
+}

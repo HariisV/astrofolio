@@ -1,0 +1,35 @@
+---
+import Icon from './Icon.astro';
+import testimonials from '../data/testimonials.json';
+const fmt = (d: string) => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
+---
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="pill">Testimonials</span>
+      <h2>What People Say</h2>
+      <p class="mono">{testimonials.length} recommendations from colleagues, mentors &amp; clients</p>
+    </div>
+    <div class="rails quotes">
+      {testimonials.map((t) => {
+        const long = t.quote.length > 320;
+        return (
+          <figure class={`quote reveal${long ? ' is-long' : ''}`}>
+            <figcaption>
+              {t.avatar ? <img class="avatar" src={t.avatar} alt={t.name} width="48" height="48" loading="lazy" decoding="async" />
+                        : <span class="avatar avatar--letter">{t.name[0].toUpperCase()}</span>}
+              <div class="quote__who"><b>{t.name}</b><small>{t.headline}</small></div>
+              {t.linkedin && <a class="quote__li" href={t.linkedin} target="_blank" rel="noopener" aria-label={`${t.name} on LinkedIn`}><Icon name="linkedin" /></a>}
+            </figcaption>
+            <blockquote>{t.quote}</blockquote>
+            {long && <button class="quote__toggle" type="button" data-toggle aria-expanded="false">Read more</button>}
+            <div class="quote__foot">
+              <span class="quote__rel">{t.relation}</span>
+              <span class="quote__src">{[t.source, fmt(t.date)].filter(Boolean).join(' · ')}</span>
+            </div>
+          </figure>
+        );
+      })}
+    </div>
+  </div>
+</section>

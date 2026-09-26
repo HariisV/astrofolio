@@ -1,0 +1,168 @@
+[
+  {
+    "company": "International Centre for Industrial Transformation",
+    "role": "Full Stack Developer",
+    "start": [
+      2024,
+      10
+    ],
+    "type": "Full-time",
+    "location": "Singapore · Hybrid",
+    "logo": "/assets/incit-logo.jpeg",
+    "story": [
+      "Building AI-powered products and production-grade web & mobile apps for a global industrial transformation organization."
+    ],
+    "wins": [
+      {
+        "m": "70%",
+        "k": "AI adoption",
+        "t": "Helped 14 engineers adopt AI-assisted coding, debugging & automation."
+      },
+      {
+        "m": "0 incidents",
+        "k": "OPERI mobile app",
+        "t": "React Native for iOS & Android — in-app purchases, offline-first, Drizzle ORM."
+      },
+      {
+        "m": "−80%",
+        "k": "IC4IT AI chatbot",
+        "t": "FastAPI + RAG with auto-synced website knowledge, cutting support workload."
+      },
+      {
+        "m": "60% faster",
+        "k": "Reliability",
+        "t": "Unit & E2E tests plus server health monitoring for faster error detection."
+      },
+      {
+        "m": "4 portals",
+        "k": "Frontend modernization",
+        "t": "React, TypeScript, Tailwind & TanStack with a standardized multilingual UX."
+      },
+      {
+        "m": "$20k / yr",
+        "k": "Task management system",
+        "t": "Built and shipped in 3 days, replacing costly third-party tools."
+      }
+    ],
+    "link": "https://incit.org/operi",
+    "linkLabel": "View OPERI"
+  },
+  {
+    "company": "Projects.co.id",
+    "role": "Freelance Website Developer",
+    "start": [
+      2023,
+      4
+    ],
+    "type": "Freelance",
+    "location": "Indonesia · Remote",
+    "logo": "",
+    "story": [
+      "Ranked in the Top 1% of freelancers on Projects.co.id with a 9.9/10 client satisfaction rating, delivering web and mobile apps for multiple clients."
+    ],
+    "wins": [
+      {
+        "m": "500k+ users",
+        "k": "Viracun web & app",
+        "t": "Rebuilt with React + Express.js, then shipped the React Native app."
+      },
+      {
+        "m": "−90%",
+        "k": "K3Mart CRM",
+        "t": "AI WhatsApp automation & Google Maps review bot for a national retail chain."
+      },
+      {
+        "m": "3.0 → 4.5★",
+        "k": "AGPAII Digital",
+        "t": "100k+ download app — security fixes, performance tuning, new forum features."
+      },
+      {
+        "m": "4 projects",
+        "k": "Solo & lead roles",
+        "t": "Solo dev for Ardata; PM, DevOps & NestJS backend for Qiwellness, Newton Lifestyle & Arena Padel."
+      }
+    ],
+    "link": "https://projects.co.id/public/browse_users/view/b37d1e/haris-wahyudi",
+    "linkLabel": "View profile"
+  },
+  {
+    "company": "Healstation Lab",
+    "role": "Full Stack Engineer",
+    "start": [
+      2023,
+      4
+    ],
+    "end": [
+      2024,
+      10
+    ],
+    "type": "Full-time",
+    "location": "South Jakarta · Hybrid",
+    "logo": "/assets/healstation-owl.png",
+    "story": [
+      "\"Want to grow fast? Join a software house.\" At Healstation I led teams, ran production infrastructure, and shipped products for international clients."
+    ],
+    "wins": [
+      {
+        "m": "8 people",
+        "k": "Team lead",
+        "t": "Led up to 8 members across 4 concurrent projects to production."
+      },
+      {
+        "m": "70% faster",
+        "k": "Cloud & CI/CD",
+        "t": "Ran AWS & Azure servers with GitHub Actions, monitoring & optimization."
+      },
+      {
+        "m": "50k+ MAU",
+        "k": "Caffeine app",
+        "t": "React Native app for a South Korean coffee brand with multiple payment & delivery options."
+      },
+      {
+        "m": "AI",
+        "k": "Legal-tech platform",
+        "t": "AI legal knowledge & expert discovery for Korean startups, built with React & Express.js."
+      }
+    ]
+  },
+  {
+    "company": "Sustainable Living Lab (SL2)",
+    "role": "Full Stack Website Developer",
+    "start": [
+      2021,
+      12
+    ],
+    "end": [
+      2023,
+      5
+    ],
+    "type": "Full-time",
+    "location": "Singapore",
+    "logo": "/assets/sl2-logo.png",
+    "story": [
+      "My first role in tech — planning and delivering scalable web applications aligned with client and business needs."
+    ],
+    "wins": [
+      {
+        "m": "Award",
+        "k": "SPRYX ESG platform",
+        "t": "Laravel & Livewire; recognized at BNI Challenge #1 for automated ESG reporting."
+      },
+      {
+        "m": "< 24h",
+        "k": "Intel AI4FW platform",
+        "t": "Custom WordPress learning platform for Intel’s AI for Future Workforce program."
+      },
+      {
+        "m": "E2E tested",
+        "k": "NextGen AI4FW",
+        "t": "React + Express.js platform with Playwright tests for release quality."
+      },
+      {
+        "m": "AWS",
+        "k": "Eddy4Teachers & tools",
+        "t": "Supervised technical implementation; built a purchase system on AWS Lightsail."
+      }
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+---
+import Icon from './Icon.astro';
+import projects from '../data/projects.json';
+import profile from '../data/profile.json';
+const LIMIT = 6;
+const count = { All: projects.length, Web: projects.filter(p => !p.mobile).length, Mobile: projects.filter(p => p.mobile).length };
+const host = (u: string) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return 'localhost:3000'; } };
+---
+<section id="works" class="block" data-projects data-limit={LIMIT}>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="pill">Works</span>
+      <h2>Projects</h2>
+    </div>
+    <div class="rails">
+      <div class="proj-bar">
+        <h3>All Projects <span class="mono" style="font-size:13px;font-weight:400;color:var(--muted)" data-proj-count>{String(projects.length).padStart(2, '0')} projects</span></h3>
+        <div class="proj-bar__rule"></div>
+        <div class="seg" role="group" aria-label="Filter projects">
+          {Object.entries(count).map(([k, n], i) => <button type="button" data-filter={k} aria-pressed={i === 0 ? 'true' : 'false'}>{k} ({n})</button>)}
+        </div>
+      </div>
+      <div class="proj-grid">
+        {projects.map((p, i) => (
+          <article class={`card reveal${i === 0 ? ' card--featured' : ''}`} data-kind={p.mobile ? 'Mobile' : 'Web'} hidden={i >= LIMIT}>
+            <div class="card__visual">
+              <span class={`card__status${p.status === 'Live' ? ' card__status--live' : ''}`}>{p.status}</span>
+              <div class="card__frame">
+                <div class="card__chrome"><i style="background:#FF5F57"></i><i style="background:#FFBD2E"></i><i style="background:#28C840"></i><span class="card__url">{host(p.live)}</span></div>
+                <img src={`${profile.projectCdn}${p.img}.webp`} alt={p.title} width="800" height="500" loading={i < 3 ? 'eager' : 'lazy'} decoding="async" />
+              </div>
+            </div>
+            <div class="card__body">
+              <div class="card__kicker"><b data-num>{String(i + 1).padStart(2, '0')}</b><i></i><span>{p.mobile ? 'Mobile App' : 'Web App'}</span></div>
+              <h4>{p.title}</h4>
+              <p class="card__desc">{p.desc}</p>
+              {p.wins.map((w) => <div class="card__win"><Icon name="trend" /><span>{w}</span></div>)}
+              <div class="card__foot">
+                <div class="tags">{p.tags.slice(0, i === 0 ? 5 : 3).map((t) => <span class="tag">{t}</span>)}</div>
+                <div style="display:flex;gap:8px;flex-shrink:0">
+                  {p.src && <a class="round" href={p.src} target="_blank" rel="noopener" aria-label="Source code"><Icon name="code" /></a>}
+                  {p.live && <a class="round round--dark" href={p.live} target="_blank" rel="noopener" aria-label="Live preview"><Icon name="arrow" /></a>}
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="more" hidden={projects.length <= LIMIT}>
+        <button class="btn" type="button" data-more><span data-more-label>Show all {projects.length} projects</span> <Icon name="chevron" /></button>
+      </div>
+    </div>
+  </div>
+</section>

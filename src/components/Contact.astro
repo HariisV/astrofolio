@@ -1,0 +1,15 @@
+---
+import Icon from './Icon.astro';
+import profile from '../data/profile.json';
+const ripples = [220, 340, 460, 580, 700];
+---
+<section id="contact" class="contact">
+  <div class="contact__dots"></div>
+  {ripples.map((s, i) => <div class="ripple" style={`width:${s}px;height:${s}px;--a:${0.28 - i * 0.05};--b:${0.06 - i * 0.01};animation-delay:${i * 0.18}s`}></div>)}
+  <div class="contact__inner reveal">
+    <h3>Thank you!</h3>
+    <p>Let's build something together.</p>
+    <a class="btn btn--primary" href={profile.social.linkedin} target="_blank" rel="noopener"><Icon name="mail" /> Get in Touch</a>
+    <small>© {new Date().getFullYear()} {profile.name} · made in Indonesia</small>
+  </div>
+</section>

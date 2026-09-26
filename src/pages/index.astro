@@ -1,0 +1,96 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Loader from '../components/Loader.astro';
+import Hero from '../components/Hero.astro';
+import Companies from '../components/Companies.astro';
+import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Contact from '../components/Contact.astro';
+import profile from '../data/profile.json';
+---
+<Base title="Haris Wahyudi — Software Engineer" description="Full stack software engineer building web, mobile & AI products. 23+ projects shipped, Top 1% freelancer.">
+  <Loader />
+  <Header />
+  <main>
+    <Hero />
+    <Companies />
+    <Experience />
+    <Education />
+    <Projects />
+    <Skills />
+    <Testimonials />
+    <Contact />
+  </main>
+</Base>
+
+<script define:vars={{ careerStart: profile.careerStart }}>
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Keep year-based numbers fresh without a rebuild
+  const now = new Date();
+  document.querySelectorAll('[data-years]').forEach((el) => {
+    const y = String(now.getFullYear() - careerStart);
+    el.textContent = y; if (el.dataset.count) el.dataset.count = y;
+  });
+  document.querySelectorAll('[data-start]').forEach((el) => {
+    const [sy, sm] = el.dataset.start.split('-').map(Number);
+    const m = now.getFullYear() * 12 + now.getMonth() + 1 - (sy * 12 + sm) + 1, y = Math.floor(m / 12), r = m % 12;
+    el.textContent = [y ? `${y} yr${y > 1 ? 's' : ''}` : '', r ? `${r} mo${r > 1 ? 's' : ''}` : ''].filter(Boolean).join(' ');
+  });
+
+  // Reveal fallback (browsers without CSS scroll-driven animations) + count-up
+  const scrollDriven = CSS.supports('animation-timeline: view()');
+  const countUp = (el) => {
+    const to = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0);
+    if (reduce) { el.textContent = to.toFixed(dec); return; }
+    const t0 = performance.now();
+    const step = (t) => { const p = Math.min(1, (t - t0) / 1400); el.textContent = (to * (1 - Math.pow(1 - p, 3))).toFixed(dec); if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  };
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    if (e.target.dataset.count) countUp(e.target);
+    io.unobserve(e.target);
+  }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  if (!scrollDriven && !reduce) document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('[data-count]').forEach((el) => io.observe(el));
+
+  // Projects: filter + show all
+  const root = document.querySelector('[data-projects]');
+  if (root) {
+    const limit = +root.dataset.limit, cards = [...root.querySelectorAll('.card')];
+    const btns = root.querySelectorAll('[data-filter]'), moreWrap = root.querySelector('.more'), moreBtn = root.querySelector('[data-more]');
+    let filter = 'All', open = false;
+    const render = () => {
+      const match = cards.filter((c) => filter === 'All' || c.dataset.kind === filter);
+      cards.forEach((c) => { c.hidden = true; c.classList.remove('card--featured'); });
+      match.forEach((c, i) => {
+        c.hidden = !open && i >= limit;
+        c.querySelector('[data-num]').textContent = String(i + 1).padStart(2, '0');
+        if (i === 0) c.classList.add('card--featured');
+      });
+      root.querySelector('[data-proj-count]').textContent = `${String(match.length).padStart(2, '0')} projects`;
+      moreWrap.hidden = match.length <= limit;
+      root.querySelector('[data-more-label]').textContent = open ? 'Show less' : `Show all ${match.length} projects`;
+      moreBtn.querySelector('svg').style.transform = open ? 'rotate(180deg)' : '';
+    };
+    btns.forEach((b) => b.addEventListener('click', () => {
+      filter = b.dataset.filter; open = false;
+      btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      render();
+    }));
+    moreBtn.addEventListener('click', () => { open = !open; render(); });
+  }
+
+  // Testimonials: read more
+  document.querySelectorAll('[data-toggle]').forEach((b) => b.addEventListener('click', () => {
+    const card = b.closest('.quote'), isOpen = card.classList.toggle('is-open');
+    b.textContent = isOpen ? 'Show less' : 'Read more';
+    b.setAttribute('aria-expanded', String(isOpen));
+  }));
+</script>

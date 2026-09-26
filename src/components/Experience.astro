@@ -1,0 +1,49 @@
+---
+import Icon from './Icon.astro';
+import jobs from '../data/jobs.json';
+import profile from '../data/profile.json';
+const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const now = new Date();
+const dur = (s: number[], e?: number[]) => {
+  const [ey, em] = e ?? [now.getFullYear(), now.getMonth() + 1];
+  const m = ey * 12 + em - (s[0] * 12 + s[1]) + 1, y = Math.floor(m / 12), r = m % 12;
+  return [y ? `${y} yr${y > 1 ? 's' : ''}` : '', r ? `${r} mo${r > 1 ? 's' : ''}` : ''].filter(Boolean).join(' ');
+};
+const years = now.getFullYear() - profile.careerStart;
+---
+<section id="experience" class="block">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="pill">My Journey</span>
+      <h2>Work Experience</h2>
+      <p class="mono"><span data-years>{years}</span>+ years · {jobs.length} roles · {profile.stats.projects}+ projects shipped</p>
+    </div>
+    <div class="rails">
+      {jobs.map((j: any) => (
+        <article class="row reveal">
+          <div class="row__head">
+            {j.logo ? <img class="logo-box" src={j.logo} alt={j.company} width="56" height="56" loading="lazy" decoding="async" />
+                    : <span class="logo-box logo-box--letter">{j.company[0]}</span>}
+            <div class="row__title">
+              <h3>{j.company}</h3>
+              <div class="row__meta">
+                <span class="row__role">{j.role}</span>
+                <span class="mono">{j.type} · <span data-start={j.end ? undefined : j.start.join('-')}>{dur(j.start, j.end)}</span></span>
+                <span class="row__loc"><Icon name="pin" />{j.location}</span>
+              </div>
+            </div>
+            <div class="row__tags">
+              {!j.end && <span class="current">Current</span>}
+              <span class="date-pill">{MON[j.start[1] - 1]} {j.start[0]} — {j.end ? `${MON[j.end[1] - 1]} ${j.end[0]}` : 'Now'}</span>
+            </div>
+          </div>
+          <div class="row__story">{j.story.map((s: string) => <p>{s}</p>)}</div>
+          {j.wins.length > 0 && (
+            <ul class="wins">{j.wins.map((w: any) => <li><span><strong>{w.k}</strong> — {w.t} <em>{w.m}</em></span></li>)}</ul>
+          )}
+          {j.link && <a class="btn btn--sm" style="align-self:flex-start" href={j.link} target="_blank" rel="noopener">{j.linkLabel} <Icon name="arrow" /></a>}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

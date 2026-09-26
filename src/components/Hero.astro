@@ -1,0 +1,44 @@
+---
+import profile from '../data/profile.json';
+const T = profile.techCdn;
+const years = new Date().getFullYear() - profile.careerStart;
+const orbit = [
+  ['react', 0, 28, 20, 11], ['javascript', 90, 28, 20, 11], ['tailwind', 180, 28, 20, 11], ['typescript', 270, 28, 20, 11],
+  ['nestjs', 0, 45, 36, 9, 1], ['laravel', 45, 45, 36, 9, 1], ['docker', 90, 45, 36, 9, 1], ['postgresql', 135, 45, 36, 9, 1],
+  ['mongodb', 180, 45, 36, 9, 1], ['go', 225, 45, 36, 9, 1], ['aws', 270, 45, 36, 9, 1], ['redis', 315, 45, 36, 9, 1],
+] as const;
+---
+<section id="about" class="hero">
+  <div class="hero__dots"></div>
+  <div class="wrap hero__grid">
+    <div>
+      <span class="pill roles reveal">{profile.roles.map(r => <span>{r}</span>)}</span>
+      <h1 class="hero__name reveal">{profile.name}</h1>
+      <div class="hero__text reveal">
+        <p>Experienced professional with <em><span data-years>{years}</span> {profile.description.split(' ').slice(0, 4).join(' ')}</em> {profile.description.split(' ').slice(4).join(' ')}</p>
+        <p>{profile.tagline}</p>
+      </div>
+      <div class="stats reveal">
+        <div><b><span data-count={years} data-years>{years}</span>+ Y.</b><small>Experience</small></div>
+        <div><b><span data-count={profile.stats.projects}>{profile.stats.projects}</span>+</b><small>Project</small></div>
+        <div><b><span data-count={profile.stats.rating} data-dec="1">{profile.stats.rating}</span>/10</b><small>Rating</small></div>
+      </div>
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary" href="#contact">Get in Touch</a>
+        <a class="btn" href={profile.social.github} target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href={profile.social.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="orbit reveal">
+      <div class="orbit__ring" style="width:56cqw;height:56cqw"></div>
+      <div class="orbit__ring" style="width:90cqw;height:90cqw;border-color:#E2E8F0"></div>
+      <div class="orbit__pulse"></div>
+      <div class="orbit__photo"><img src={profile.avatar} alt={profile.name} width="220" height="220" fetchpriority="high" /></div>
+      {orbit.map(([n, a, r, dur, w, rev]) => (
+        <div class="orbit__item" style={`--a:${a}deg;--r:${r}cqw;--w:${w}cqw;--dur:${dur}s;${rev ? '--dir:reverse;' : ''}`}>
+          <img src={`${T}${n}.webp`} alt={n} width="48" height="48" loading="lazy" decoding="async" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
