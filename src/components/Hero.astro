@@ -13,23 +13,23 @@ const orbit = [
   <div class="hero__dots"></div>
   <div class="wrap hero__grid">
     <div class="intro">
-      <div class="intro__top reveal">
+      <div class="intro__top reveal" data-reveal="0">
         <span class="pill roles">{profile.roles.map(r => <span>{r}</span>)}</span>
       </div>
-      <h1 class="intro__name reveal">{profile.name}</h1>
-      <p class="intro__lead reveal">Experienced professional with <em><span data-years>{years}</span> {profile.description.split(' ').slice(0, 4).join(' ')}</em> {profile.description.split(' ').slice(4).join(' ')} {profile.tagline}</p>
-      <dl class="intro__stats reveal">
+      <h1 class="intro__name reveal" data-reveal="100">{profile.name}</h1>
+      <p class="intro__lead reveal" data-reveal="200">Experienced professional with <em><span data-years>{years}</span> {profile.description.split(' ').slice(0, 4).join(' ')}</em> {profile.description.split(' ').slice(4).join(' ')} {profile.tagline}</p>
+      <dl class="intro__stats reveal" data-reveal="300">
         <div><dt><span data-count={years} data-years>{years}</span>+</dt><dd>Years experience</dd></div>
         <div><dt><span data-count={profile.stats.projects}>{profile.stats.projects}</span>+</dt><dd>Projects shipped</dd></div>
         <div><dt><span data-count={profile.stats.rating} data-dec="1">{profile.stats.rating}</span><small>/10</small></dt><dd>Client rating</dd></div>
       </dl>
-      <div class="intro__cta reveal">
+      <div class="intro__cta reveal" data-reveal="400">
         <a class="intro__btn" href="#contact"><span>Get in Touch</span><b><Icon name="arrow" /></b></a>
         <a class="intro__icon" href={profile.social.github} target="_blank" rel="noopener" aria-label="GitHub"><Icon name="github" /></a>
         <a class="intro__icon" href={profile.social.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn"><Icon name="linkedin" /></a>
       </div>
     </div>
-    <div class="orbit reveal">
+    <div class="orbit reveal" data-reveal="200">
       <div class="orbit__ring" style="width:56cqw;height:56cqw"></div>
       <div class="orbit__ring" style="width:90cqw;height:90cqw;border-color:#E2E8F0"></div>
       <div class="orbit__pulse"></div>

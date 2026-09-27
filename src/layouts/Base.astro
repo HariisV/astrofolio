@@ -42,6 +42,7 @@ const image = new URL('/assets/og-image.png', Astro.site).href;
         setTimeout(done, h.classList.contains('loader-fast') ? 1500 : 4500);
       })();
     </script>
+    <noscript><style>.reveal { opacity: 1; filter: none; transform: none; }</style></noscript>
   </head>
   <body>
     <slot />
