@@ -2,9 +2,8 @@
 import Icon from './Icon.astro';
 import projects from '../data/projects.json';
 import profile from '../data/profile.json';
-const LIMIT = 6;
+const LIMIT = 7;
 const count = { All: projects.length, Web: projects.filter(p => !p.mobile).length, Mobile: projects.filter(p => p.mobile).length };
-const host = (u: string) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return 'localhost:3000'; } };
 ---
 <section id="works" class="block" data-projects data-limit={LIMIT}>
   <div class="wrap">
@@ -24,10 +23,8 @@ const host = (u: string) => { try { return new URL(u).hostname.replace(/^www\./,
         {projects.map((p, i) => (
           <article class={`card reveal${i === 0 ? ' card--featured' : ''}`} data-kind={p.mobile ? 'Mobile' : 'Web'} hidden={i >= LIMIT}>
             <div class="card__visual">
-              <span class={`card__status${p.status === 'Live' ? ' card__status--live' : ''}`}>{p.status}</span>
-              <div class="card__frame">
-                <div class="card__chrome"><i style="background:#FF5F57"></i><i style="background:#FFBD2E"></i><i style="background:#28C840"></i><span class="card__url">{host(p.live)}</span></div>
-                <img src={`${profile.projectCdn}${p.img}.webp`} alt={p.title} width="800" height="500" loading={i < 3 ? 'eager' : 'lazy'} decoding="async" />
+              <div class="card__frame card__frame--bare">
+                <img src={`${profile.projectCdn}${p.img}.webp`} alt={p.title} width="800" height="500" loading="lazy" decoding="async" />
               </div>
             </div>
             <div class="card__body">

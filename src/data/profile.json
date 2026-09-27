@@ -9,32 +9,56 @@
   ],
   "description": "years of hands-on experience, a strong work ethic, adaptability, and dedication to delivering high-quality results.",
   "tagline": "I have a passion for problem-solving, which fuels my persistence in overcoming challenges.",
-  "avatar": "/assets/avatar.png",
+  "avatar": "/assets/avatar.webp",
   "resume": "/cv/CV - Haris Wahyudi.pdf",
   "social": {
     "github": "https://github.com/hariisV",
     "linkedin": "https://linkedin.com/in/harisw"
   },
   "stats": {
-    "projects": 23,
+    "projects": 50,
     "rating": 9.9
   },
   "companies": [
     {
+      "name": "International Centre for Industrial Transformation",
+      "logo": "/assets/incit-logo.webp"
+    },
+    {
       "name": "Sustainable Living Lab",
-      "logo": "/assets/sl2-logo.png"
+      "logo": "/assets/sl2-logo.webp"
+    },
+    {
+      "name": "Satria Nusa Enjinering",
+      "logo": "/assets/sne-logo.webp"
     },
     {
       "name": "Healstation Lab",
-      "logo": "/assets/healstation-owl.png"
-    },
-    {
-      "name": "INCIT",
-      "logo": "/assets/incit-logo.jpeg"
+      "logo": "/assets/healstation-owl.webp"
     },
     {
       "name": "Asia Cyber University",
-      "logo": "/assets/edu-unsia.jpeg"
+      "logo": "/assets/edu-unsia.webp"
+    },
+    {
+      "name": "Ardata",
+      "logo": "/assets/ardata-logo.webp"
+    },
+    {
+      "name": "Fazztrack",
+      "logo": "/assets/edu-fazztrack.webp"
+    },
+    {
+      "name": "DRH.co.id",
+      "logo": "/assets/drh-logo.webp"
+    },
+    {
+      "name": "Viracun",
+      "logo": "/assets/viracun-logo.webp"
+    },
+    {
+      "name": "K3Mart",
+      "logo": "/assets/k3mart-logo.webp"
     }
   ],
   "techCdn": "/techstack/",

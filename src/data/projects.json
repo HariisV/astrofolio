@@ -26,7 +26,52 @@
       "Gained 500.000+ users in 6 months of launch"
     ],
     "img": "viracun",
-    "live": "https://bimbel.viracun.id/",
+    "live": "https://viracun.id/",
+    "src": "",
+    "mobile": false
+  },
+  {
+    "title": "Qi Wellness & Lifestyle App",
+    "status": "Live",
+    "desc": "Mobile booking app for a wellness & spa brand. Customers pick an outlet, choose a room tier, and book treatments, with social login, saved payment methods, and a membership points program.",
+    "tags": [
+      "React Native Expo",
+      "NestJS",
+      "PostgreSQL"
+    ],
+    "wins": [],
+    "img": "qi-wellness",
+    "live": "https://play.google.com/store/apps/details?id=com.qiwellness&hl=id",
+    "src": "",
+    "mobile": true
+  },
+  {
+    "title": "Newton Lifestyle Hub",
+    "status": "Live",
+    "desc": "Official Newton app for Android & iOS — book activities, order via QR, pay in-app, and track your transaction history. Backed by an admin dashboard with analytics, order management, POS, and payroll.",
+    "tags": [
+      "React Native Expo",
+      "NestJS",
+      "PostgreSQL"
+    ],
+    "wins": [],
+    "img": "newton",
+    "live": "https://play.google.com/store/apps/details?id=com.digitalinovasiglobal.newtonpadel",
+    "src": "",
+    "mobile": true
+  },
+  {
+    "title": "Seng Hap 1881 — Consignment Platform",
+    "status": "Live",
+    "desc": "Consignment management app for a heritage retail destination in Medan, handling 500+ vendors end to end — vendor onboarding & curation, sales reports, and consignment payroll.",
+    "tags": [
+      "Next.js",
+      "Tailwind",
+      "PostgreSQL"
+    ],
+    "wins": [],
+    "img": "senghap",
+    "live": "https://senghap1881.com",
     "src": "",
     "mobile": false
   },
@@ -194,7 +239,7 @@
       "Service Workers"
     ],
     "wins": [
-      "Full PWA implementation with offline capabilities",
+      "PWA with offline support",
       "Push notifications and service workers"
     ],
     "img": "luxspace",

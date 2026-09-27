@@ -2,6 +2,8 @@
 import '../styles/global.css';
 interface Props { title: string; description: string }
 const { title, description } = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const image = new URL('/assets/og-image.png', Astro.site).href;
 ---
 <!doctype html>
 <html lang="en">
@@ -12,14 +14,33 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/assets/avatar.png" />
+    <link rel="canonical" href={url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Haris Wahyudi" />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Haris Wahyudi" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/instrument-sans-latin.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/jetbrains-mono-latin.woff2" crossorigin />
-    <link rel="preload" as="image" href="/assets/avatar.png" />
-    <!-- Show the build loader only once per session -->
+    <link rel="preload" as="image" href="/assets/avatar.webp" />
+    <!-- Full build loader on first visit; a quick 1s replay once it has been seen. Page scroll is locked while it runs. -->
     <script is:inline>
-      try { if (sessionStorage.getItem('seenLoader')) document.documentElement.classList.add('no-loader'); sessionStorage.setItem('seenLoader', '1'); } catch (e) {}
+      (function () {
+        var h = document.documentElement;
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        try { if (sessionStorage.getItem('seenLoader')) h.classList.add('loader-fast'); } catch (e) {}
+        h.classList.add('loading');
+        var done = function () { h.classList.remove('loading'); try { sessionStorage.setItem('seenLoader', '1'); } catch (e) {} };
+        addEventListener('animationend', function (e) { if (e.animationName === 'loaderOut') done(); });
+        setTimeout(done, h.classList.contains('loader-fast') ? 1500 : 4500);
+      })();
     </script>
   </head>
   <body>

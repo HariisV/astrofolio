@@ -2,7 +2,7 @@
   {
     "period": "2022 — 2026",
     "sub": "Jun 2022 – Mar 2026",
-    "logo": "/assets/edu-unsia.jpeg",
+    "logo": "/assets/edu-unsia.webp",
     "name": "Asia Cyber University",
     "degree": "Bachelor's Degree, Computer Science",
     "desc": [
@@ -13,7 +13,7 @@
   {
     "period": "2022",
     "sub": "2022 · 3 months",
-    "logo": "/assets/edu-fazztrack.png",
+    "logo": "/assets/edu-fazztrack.webp",
     "name": "Fazztrack Bootcamp",
     "degree": "Full-stack JavaScript",
     "desc": [
@@ -23,7 +23,7 @@
   {
     "period": "2018 — 2021",
     "sub": "2018 – 2021",
-    "logo": "/assets/edu-smk5.jpg",
+    "logo": "/assets/edu-smk5.webp",
     "name": "SMKN 5 Telkom Banda Aceh",
     "degree": "Computer & Information Sciences",
     "desc": [

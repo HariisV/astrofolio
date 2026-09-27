@@ -12,7 +12,7 @@ import Testimonials from '../components/Testimonials.astro';
 import Contact from '../components/Contact.astro';
 import profile from '../data/profile.json';
 ---
-<Base title="Haris Wahyudi — Software Engineer" description="Full stack software engineer building web, mobile & AI products. 23+ projects shipped, Top 1% freelancer.">
+<Base title="Haris Wahyudi — Software Engineer" description="Full stack software engineer building web, mobile & AI products. 50+ projects shipped, Top 1% freelancer.">
   <Loader />
   <Header />
   <main>
@@ -41,6 +41,16 @@ import profile from '../data/profile.json';
     const m = now.getFullYear() * 12 + now.getMonth() + 1 - (sy * 12 + sm) + 1, y = Math.floor(m / 12), r = m % 12;
     el.textContent = [y ? `${y} yr${y > 1 ? 's' : ''}` : '', r ? `${r} mo${r > 1 ? 's' : ''}` : ''].filter(Boolean).join(' ');
   });
+
+  // Hero roles pill: resize to fit the role currently shown
+  const roles = document.querySelector('.roles');
+  if (roles && !reduce) {
+    const pad = parseFloat(getComputedStyle(roles).paddingLeft) + parseFloat(getComputedStyle(roles).paddingRight);
+    const fit = (el) => { roles.style.width = `${el.offsetWidth + pad}px`; };
+    fit(roles.firstElementChild);
+    roles.addEventListener('animationstart', (e) => fit(e.target));
+    roles.addEventListener('animationiteration', (e) => fit(e.target));
+  }
 
   // Reveal fallback (browsers without CSS scroll-driven animations) + count-up
   const scrollDriven = CSS.supports('animation-timeline: view()');

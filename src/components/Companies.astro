@@ -1,14 +1,16 @@
 ---
 import profile from '../data/profile.json';
+import jobs from '../data/jobs.json';
+const current = new Set(jobs.filter((j: any) => !j.end).map((j) => j.company));
 const items = [...profile.companies, ...profile.companies, ...profile.companies, ...profile.companies];
 ---
 <section class="companies reveal">
   <div class="wrap">
     <p class="companies__label">Companies I’ve worked with &amp; grown alongside as an engineer.</p>
     <div class="marquee">
-      <div class="marquee__track">
+      <div class="marquee__track" style={`animation-duration:${profile.companies.length * 7}s`}>
         {items.map((c, i) => (
-          <div class="marquee__item" aria-hidden={i >= profile.companies.length ? 'true' : undefined}>
+          <div class={`marquee__item${current.has(c.name) ? ' marquee__item--now' : ''}`} aria-hidden={i >= profile.companies.length ? 'true' : undefined}>
             <img src={c.logo} alt="" width="56" height="56" loading="lazy" decoding="async" /><span>{c.name}</span>
           </div>
         ))}

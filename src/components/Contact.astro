@@ -1,15 +1,95 @@
 ---
 import Icon from './Icon.astro';
 import profile from '../data/profile.json';
-const ripples = [220, 340, 460, 580, 700];
 ---
-<section id="contact" class="contact">
-  <div class="contact__dots"></div>
-  {ripples.map((s, i) => <div class="ripple" style={`width:${s}px;height:${s}px;--a:${0.28 - i * 0.05};--b:${0.06 - i * 0.01};animation-delay:${i * 0.18}s`}></div>)}
-  <div class="contact__inner reveal">
-    <h3>Thank you!</h3>
-    <p>Let's build something together.</p>
-    <a class="btn btn--primary" href={profile.social.linkedin} target="_blank" rel="noopener"><Icon name="mail" /> Get in Touch</a>
-    <small>© {new Date().getFullYear()} {profile.name} · made in Indonesia</small>
+<footer id="contact" class="foot">
+  <canvas class="foot__grid-bg" aria-hidden="true" data-flicker></canvas>
+  <div class="wrap foot__grid reveal">
+    <div>
+      <span class="foot__avail"><i></i>Available for new projects</span>
+      <h2 aria-label="Let's build something together" data-type><span aria-hidden="true" data-type-out>Let's build<br />something <span>together</span></span><em class="foot__caret"></em></h2>
+    </div>
+    <a class="foot__big" href={profile.social.linkedin} target="_blank" rel="noopener">
+      <span>Get in Touch</span><b><Icon name="arrow" /></b>
+    </a>
   </div>
-</section>
+
+  <div class="wrap"><div class="foot__bar">
+    <small>© {new Date().getFullYear()} {profile.name} · made in Indonesia</small>
+    <a href="#about" class="foot__top">Back to top <Icon name="chevron" /></a>
+  </div></div>
+</footer>
+
+<script is:inline>
+  // Flickering grid background (canvas); only animates while the footer is on screen
+  (function () {
+    var c = document.querySelector('[data-flicker]'); if (!c) return;
+    var ctx = c.getContext('2d'), SIZE = 4, GAP = 6, STEP = SIZE + GAP, CHANCE = 0.3, MAX = 0.35;
+    var dpr = 1, cols = 0, rows = 0, cells = new Float32Array(0), raf = 0, last = 0;
+    var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var resize = function () {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var w = c.clientWidth, h = c.clientHeight;
+      c.width = w * dpr; c.height = h * dpr;
+      cols = Math.ceil(w / STEP); rows = Math.ceil(h / STEP);
+      cells = new Float32Array(cols * rows);
+      for (var i = 0; i < cells.length; i++) cells[i] = Math.random() * MAX;
+      draw();
+    };
+    var draw = function () {
+      ctx.clearRect(0, 0, c.width, c.height);
+      for (var x = 0; x < cols; x++) for (var y = 0; y < rows; y++) {
+        ctx.fillStyle = 'rgba(111,207,221,' + cells[x * rows + y] + ')';
+        ctx.fillRect(x * STEP * dpr, y * STEP * dpr, SIZE * dpr, SIZE * dpr);
+      }
+    };
+    var frame = function (t) {
+      raf = requestAnimationFrame(frame);
+      if (t - last < 42) return; // ~24fps is plenty for a flicker
+      var dt = (t - last) / 1000; last = t;
+      for (var i = 0; i < cells.length; i++) if (Math.random() < CHANCE * dt) cells[i] = Math.random() * MAX;
+      draw();
+    };
+    resize();
+    new ResizeObserver(resize).observe(c);
+    if (still) return;
+    new IntersectionObserver(function (e) {
+      cancelAnimationFrame(raf);
+      if (e[0].isIntersecting) { last = performance.now(); raf = requestAnimationFrame(frame); }
+    }).observe(c);
+  })();
+</script>
+
+<script is:inline>
+  // Typewriter for the footer headline; starts once it scrolls into view
+  (function () {
+    var h = document.querySelector('[data-type]'); if (!h) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+    var out = h.querySelector('[data-type-out]');
+    // Build a queue: [node to append, text to type into it (or null)]
+    var queue = [];
+    [].slice.call(out.childNodes).forEach(function (n) {
+      if (n.nodeType === 3) queue.push([document.createTextNode(''), n.textContent, out]);
+      else if (n.nodeName === 'BR') queue.push([document.createElement('br'), null, out]);
+      else { var el = n.cloneNode(false), tx = document.createTextNode(''); queue.push([el, null, out], [tx, n.textContent, el]); }
+    });
+    h.style.minHeight = h.offsetHeight + 'px';
+    out.textContent = '';
+    var type = function () {
+      h.classList.add('is-typing');
+      var i = 0, c = 0;
+      var step = function () {
+        var q = queue[i];
+        if (!q) { h.classList.remove('is-typing'); h.style.minHeight = ''; return; }
+        if (!q[0].parentNode) q[2].appendChild(q[0]);
+        if (q[1] === null) { i++; return step(); }
+        q[0].textContent = q[1].slice(0, ++c);
+        if (c >= q[1].length) { i++; c = 0; }
+        setTimeout(step, 45 + Math.random() * 55);
+      };
+      setTimeout(step, 250);
+    };
+    var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { io.disconnect(); type(); } }, { threshold: 0.6 });
+    io.observe(h);
+  })();
+</script>
