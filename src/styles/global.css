@@ -67,7 +67,7 @@ section.block { border-bottom: 1px solid var(--line); }
 
 /* Loader (pure CSS) */
 .loader { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #fff radial-gradient(#E5E7EB 1px, transparent 1px) 0 0 / 28px 28px; animation: loaderOut .6s ease 3.3s forwards; }
-.loading, .loading body { overflow: hidden; }
+.loading { overflow: hidden; }
 /* Quick replay (~1s) once the full loader has been seen this session */
 .loader-fast .loader { animation: loaderOut .3s ease .7s forwards; }
 .loader-fast .term__cmd { animation: typing .2s steps(13) forwards; }
