@@ -6,37 +6,23 @@
       {
         "name": "React",
         "icon": "react",
-        "since": 2020,
-        "projects": 15,
-        "description": "Building dynamic user interfaces with hooks, context, and modern React patterns — complex state management and component architecture."
-      },
-      {
-        "name": "React Native",
-        "icon": "react",
-        "since": 2021,
-        "projects": 6,
-        "description": "Cross-platform mobile development. Built multiple mobile apps with navigation, state management, and native integrations."
+        "since": 2019,
+        "projects": 12,
+        "description": "Component-driven UIs with hooks and a focus on accessible, responsive layouts."
       },
       {
         "name": "Next.js",
         "icon": "next",
-        "since": 2022,
-        "projects": 4,
-        "description": "Full-stack React framework for production. SSR, SSG, API routes, and performance optimization."
+        "since": 2021,
+        "projects": 6,
+        "description": "Server-rendered apps and static sites with the App Router."
       },
       {
         "name": "Tailwind CSS",
         "icon": "tailwind",
-        "since": 2022,
-        "projects": "20+",
-        "description": "Utility-first CSS for rapid UI development — responsive design, custom configurations, and component styling."
-      },
-      {
-        "name": "Vue.js",
-        "icon": "vue",
-        "since": 2023,
-        "projects": 2,
-        "description": "Progressive framework for building user interfaces. Vue CLI, Vuex, and component-based architecture."
+        "since": 2020,
+        "projects": 10,
+        "description": "Utility-first styling and small design systems."
       }
     ]
   },
@@ -45,39 +31,18 @@
     "icon": "settings",
     "items": [
       {
-        "name": "Express.js",
+        "name": "Node.js / Express",
         "icon": "express",
-        "since": 2020,
-        "projects": 11,
-        "description": "Fast, unopinionated Node.js framework. RESTful APIs, middleware, authentication systems, and real-time apps."
+        "since": 2019,
+        "projects": 10,
+        "description": "REST APIs, auth, and background jobs."
       },
       {
         "name": "NestJS",
         "icon": "nestjs",
         "since": 2022,
-        "projects": 7,
-        "description": "Scalable server-side applications with modules, dependency injection, and RESTful APIs."
-      },
-      {
-        "name": "Laravel",
-        "icon": "laravel",
-        "since": 2022,
-        "projects": 10,
-        "description": "Eloquent ORM, Blade templating, authentication, and API development."
-      },
-      {
-        "name": "FastAPI",
-        "icon": "fastapi",
-        "since": 2023,
-        "projects": 2,
-        "description": "High-performance Python APIs with async endpoints, dependency injection, and OpenAPI docs."
-      },
-      {
-        "name": "Golang",
-        "icon": "go",
-        "since": 2023,
         "projects": 4,
-        "description": "Statically typed, concurrent language. REST APIs, CLI tools, and microservices."
+        "description": "Modular, typed services with validation and testing built in."
       }
     ]
   },
@@ -86,32 +51,18 @@
     "icon": "database",
     "items": [
       {
-        "name": "MySQL",
-        "icon": "mysql",
-        "since": 2021,
-        "projects": 15,
-        "description": "Complex queries, indexing, optimization, and database design for high-performance applications."
-      },
-      {
         "name": "PostgreSQL",
         "icon": "postgresql",
-        "since": 2022,
-        "projects": 8,
-        "description": "JSONB, advanced queries, and enterprise-level database management."
-      },
-      {
-        "name": "MongoDB",
-        "icon": "mongodb",
-        "since": 2022,
-        "projects": 5,
-        "description": "Aggregation pipelines, indexing strategies, and schema design."
+        "since": 2020,
+        "projects": 9,
+        "description": "Relational schemas, indexing, and query tuning."
       },
       {
         "name": "Redis",
         "icon": "redis",
         "since": 2021,
-        "projects": 7,
-        "description": "Caching and session management — pub/sub, persistence, and performance optimization."
+        "projects": 4,
+        "description": "Caching, queues, and rate limiting."
       }
     ]
   },
@@ -120,18 +71,18 @@
     "icon": "cloud",
     "items": [
       {
-        "name": "AWS",
-        "icon": "aws",
-        "since": 2020,
-        "projects": null,
-        "description": "EC2, S3, RDS, Lambda, and deployment automation."
-      },
-      {
         "name": "Docker",
         "icon": "docker",
+        "since": 2020,
+        "projects": 8,
+        "description": "Containerized dev environments and deployments."
+      },
+      {
+        "name": "AWS",
+        "icon": "aws",
         "since": 2021,
-        "projects": null,
-        "description": "Dockerfile, docker-compose, and container orchestration."
+        "projects": 5,
+        "description": "EC2, S3, and managed databases."
       }
     ]
   },
@@ -140,39 +91,18 @@
     "icon": "build",
     "items": [
       {
-        "name": "Figma",
-        "icon": "figma",
-        "since": 2020,
-        "projects": null,
-        "description": "UI/UX prototyping, design systems, component libraries, and developer handoff."
-      },
-      {
         "name": "TypeScript",
         "icon": "typescript",
-        "since": 2021,
-        "projects": null,
-        "description": "Generics, interfaces, and type safety for better code quality."
-      },
-      {
-        "name": "JavaScript",
-        "icon": "javascript",
         "since": 2020,
-        "projects": null,
-        "description": "Modern ES6+ — async/await, modules, and advanced DOM manipulation."
+        "projects": 14,
+        "description": "Typed JavaScript across frontend and backend."
       },
       {
-        "name": "Jest",
-        "icon": "jest",
-        "since": 2020,
-        "projects": null,
-        "description": "Unit, integration, and e2e tests for Node.js and frontend apps."
-      },
-      {
-        "name": "LangChain",
-        "icon": "langchain",
-        "since": 2024,
-        "projects": null,
-        "description": "LLM-powered workflows, chains, and agents for automation and data processing."
+        "name": "Figma",
+        "icon": "figma",
+        "since": 2019,
+        "projects": 8,
+        "description": "Wireframes and handoff with designers."
       }
     ]
   }

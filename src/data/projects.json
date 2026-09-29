@@ -1,459 +1,89 @@
 [
   {
-    "title": "Operational Excellence Readiness Index",
+    "title": "Pulse Analytics",
     "status": "Live",
-    "desc": "OPERI is a self-assessment tool that helps MSMEs understand their business maturity, get tailored recommendations, and track progress over time. It works offline and will be available in 10 languages, making it accessible for businesses in remote areas.",
+    "desc": "Self-serve analytics dashboard for retail teams. Tracks sales, stock, and staffing across stores in one place, with scheduled email reports.",
     "tags": [],
     "wins": [],
-    "img": "operi",
-    "live": "https://incit.org/operi",
-    "cta": "Visit OPERI",
-    "src": "",
-    "type": "MOBILE"
-  },
-  {
-    "title": "Viracun Learning Platform",
-    "status": "Live",
-    "desc": "Web-based application designed for learning and practice for civil servant candidates. Built using React and Express with comprehensive study materials and progress tracking.",
-    "tags": [
-      "React",
-      "Express",
-      "Tailwind",
-      "Prisma",
-      "PostgreSQL"
-    ],
-    "wins": [
-      "Helped client migrate from legacy system to modern stack",
-      "Gained 500.000+ users in 6 months of launch"
-    ],
-    "img": "viracun",
-    "live": "https://viracun.id/",
+    "img": "pulse-dashboard",
+    "live": "https://example.com",
+    "cta": "Visit Pulse",
     "src": "",
     "type": "WEB"
   },
   {
-    "title": "Viracun Mobile App",
+    "title": "Trailmate Hiking App",
     "status": "Live",
-    "desc": "Mobile companion to the Viracun learning platform for CPNS & PPPK exam prep, available on both the App Store (iOS) and Google Play (Android). Candidates study complete materials, take practice tryouts, and track their scores and progress on the go, fully synced with their web account.",
+    "desc": "Offline-first hiking companion with downloadable maps, trail difficulty ratings, and trip sharing.",
     "tags": [
       "React Native",
-      "Gluestack"
-    ],
-    "wins": [],
-    "img": "viracun-mobile",
-    "live": "https://play.google.com/store/apps/details?id=id.viracun.app&hl=id",
-    "src": "",
-    "type": "MOBILE"
-  },
-  {
-    "title": "K3Mart CRM",
-    "status": "Live",
-    "desc": "Omnichannel customer service CRM for K3Mart that brings Instagram DMs, WhatsApp chats, and Google Maps reviews into one inbox. An AI chatbot answers customer messages and auto-replies to Maps reviews, while a dashboard tracks response time, open tickets, and rating trends across outlets.",
-    "tags": [
-      "Next.js",
-      "GCP"
-    ],
-    "wins": [],
-    "img": "k3mart-crm",
-    "live": "",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "Qi Wellness & Lifestyle App",
-    "status": "Live",
-    "desc": "Mobile booking app for a wellness & spa brand. Customers pick an outlet, choose a room tier, and book treatments, with social login, saved payment methods, and a membership points program.",
-    "tags": [
       "Expo",
-      "NestJS",
-      "PostgreSQL"
+      "SQLite"
     ],
     "wins": [],
-    "img": "qi-wellness",
-    "live": "https://play.google.com/store/apps/details?id=com.qiwellness&hl=id",
+    "img": "trailmate",
+    "live": "https://play.google.com/store",
     "src": "",
     "type": "MOBILE"
   },
   {
-    "title": "Seng Hap 1881 — Consignment Platform",
+    "title": "Shelfie Books",
     "status": "Live",
-    "desc": "Consignment management app for a heritage retail destination in Medan, handling 500+ vendors end to end — vendor onboarding & curation, sales reports, and consignment payroll.",
+    "desc": "Online bookstore with search, wishlists, and Stripe checkout.",
     "tags": [
       "Next.js",
-      "Tailwind",
+      "Stripe",
       "PostgreSQL"
     ],
-    "wins": [],
-    "img": "senghap",
-    "live": "https://senghap1881.com",
-    "src": "",
+    "wins": [
+      "Cut checkout drop-off by 25% with a one-page flow"
+    ],
+    "img": "shelfie",
+    "live": "https://example.com",
+    "src": "https://github.com",
     "type": "WEB"
   },
   {
-    "title": "Caffeine Coffee App",
-    "status": "Live",
-    "desc": "Mobile application for purchasing coffee online with Express.js backend. Features include real-time order tracking, payment integration, and loyalty rewards system.",
+    "title": "Mealplan",
+    "status": "Demo",
+    "desc": "Weekly meal planner that turns recipes into a shopping list grouped by aisle.",
     "tags": [
-      "Express",
-      "PostgreSQL",
-      "Sequelize",
-      "React Native"
+      "Flutter",
+      "Firebase"
     ],
     "wins": [],
-    "img": "caffein",
-    "live": "https://play.google.com/store/apps/details?id=com.caffeineism",
+    "img": "mealplan",
+    "live": "",
     "src": "",
     "type": "MOBILE"
   },
   {
-    "title": "TryoutASN",
+    "title": "Helpdesk AI Inbox",
     "status": "Live",
-    "desc": "Mobile application for TryoutASN built with React Native and Laravel API. Helps civil service candidates prepare for their exams with practice tests, study materials, and progress tracking.",
+    "desc": "Shared support inbox that drafts replies with an LLM and routes tickets by topic.",
     "tags": [
-      "Laravel",
-      "React Native",
-      "Gluestack"
-    ],
-    "wins": [],
-    "img": "tryoutasn-mobile",
-    "live": "https://play.google.com/store/apps/details?id=com.tryoutasn",
-    "src": "",
-    "type": "MOBILE"
-  },
-  {
-    "title": "DRH.co.id — Veterinary Clinic",
-    "status": "Live",
-    "desc": "Web application for veterinary clinic management with appointment scheduling, patient records, and online consultations. Built with React and NestJS.",
-    "tags": [
-      "React",
-      "Nest",
-      "Tailwind",
-      "Prisma",
-      "MySQL"
-    ],
-    "wins": [],
-    "img": "drh",
-    "live": "https://drh.co.id/",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "Newton Lifestyle Hub",
-    "status": "Live",
-    "desc": "Official Newton app for Android & iOS — book activities, order via QR, pay in-app, and track your transaction history. Backed by an admin dashboard with analytics, order management, POS, and payroll.",
-    "tags": [
-      "Expo",
       "NestJS",
-      "PostgreSQL"
+      "Redis",
+      "OpenAI"
     ],
     "wins": [],
-    "img": "newton",
-    "live": "https://play.google.com/store/apps/details?id=com.digitalinovasiglobal.newtonpadel",
-    "src": "",
-    "type": "MOBILE"
-  },
-  {
-    "title": "SickGPT Health Assistant",
-    "status": "Live",
-    "desc": "AI-powered web application for disease information using OpenAI. Provides intelligent health recommendations and symptom analysis with MERN stack architecture.",
-    "tags": [
-      "React",
-      "Express",
-      "MongoDB",
-      "OpenAI",
-      "Node.js"
-    ],
-    "wins": [
-      "AI-powered health information system with OpenAI integration"
-    ],
-    "img": "sickgpt",
-    "live": "https://sickgpt.io/",
+    "img": "helpdesk-ai",
+    "live": "https://example.com",
     "src": "",
     "type": "WEB"
   },
   {
-    "title": "Brainfit Online",
-    "status": "Live",
-    "desc": "Sophisticated landing page with integrated admin panel using Laravel and Alpine.js. Features content management system and analytics dashboard.",
-    "tags": [
-      "Laravel",
-      "TailwindCSS",
-      "AlpineJS",
-      "MySQL"
-    ],
-    "wins": [],
-    "img": "brainfit",
-    "live": "http://brainfitonline.co.id/",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "BPT App",
-    "status": "Live",
-    "desc": "An application developed for Buya Pasaman Timur, an Islamic organization in Indonesia. Focuses on managing users, articles, and various organizational activities.",
+    "title": "Parcel Tracker",
+    "status": "Demo",
+    "desc": "Delivery tracking app with live courier location and push notifications.",
     "tags": [
       "React Native",
-      "Express",
-      "Gluestack",
-      "MySQL"
+      "Express"
     ],
     "wins": [],
-    "img": "bpt",
-    "live": "https://play.google.com/store/apps/details?id=com.bpt_app",
-    "src": "",
+    "img": "parcel-tracker",
+    "live": "",
+    "src": "https://github.com",
     "type": "MOBILE"
-  },
-  {
-    "title": "My Bucket Social Media",
-    "status": "Live",
-    "desc": "Social media application built with MERN stack. Includes real-time messaging, content sharing, and user engagement features.",
-    "tags": [
-      "React",
-      "Tailwind",
-      "Express",
-      "MongoDB",
-      "Socket.io"
-    ],
-    "wins": [
-      "Full-featured social media platform with real-time capabilities"
-    ],
-    "img": "my-bucket",
-    "live": "https://my-bucket.co.kr/",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "Semina Event Booking",
-    "status": "Demo",
-    "desc": "Web application for booking seminar events online with payment integration and ticket management system. Built with MERN stack.",
-    "tags": [
-      "MongoDB",
-      "Express",
-      "React",
-      "Node.js",
-      "Stripe"
-    ],
-    "wins": [],
-    "img": "semina",
-    "live": "",
-    "src": "https://github.com/HariisV/semina-backend",
-    "type": "WEB"
-  },
-  {
-    "title": "Shop DRH.co.id — Veterinary Marketplace",
-    "status": "Live",
-    "desc": "Marketplace for veterinary products only for doctors and clinics. Features product management, order processing, and shipping integration.",
-    "tags": [
-      "React",
-      "Express.JS",
-      "Tailwind",
-      "Prisma",
-      "MySQL"
-    ],
-    "wins": [],
-    "img": "shop-drh",
-    "live": "https://drh.co.id/",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "Luxspace PWA",
-    "status": "Demo",
-    "desc": "Project showcase to demonstrate PWA capabilities with offline support, push notifications, and service workers. Built with React and Tailwind CSS.",
-    "tags": [
-      "React",
-      "PWA",
-      "Tailwind",
-      "Workbox",
-      "Service Workers"
-    ],
-    "wins": [
-      "PWA with offline support",
-      "Push notifications and service workers"
-    ],
-    "img": "luxspace",
-    "live": "https://luxspace-pwa.vercel.app/",
-    "src": "https://github.com/HariisV/Luxspace_PWA",
-    "type": "WEB"
-  },
-  {
-    "title": "StoreGG Topup Game",
-    "status": "Demo",
-    "desc": "Fullstack course project at BuildWithAngga: a top-up game platform with user registration, balance management, and game item purchases.",
-    "tags": [
-      "React",
-      "Express",
-      "MongoDB",
-      "Tailwind"
-    ],
-    "wins": [],
-    "img": "storegg",
-    "live": "",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "Tickez Web App",
-    "status": "Demo",
-    "desc": "Movie ticket booking application with seat selection, payment processing, and QR code tickets. Features real-time seat availability.",
-    "tags": [
-      "React",
-      "Bootstrap",
-      "Express",
-      "Redis",
-      "Midtrans"
-    ],
-    "wins": [],
-    "img": "tickitz-web",
-    "live": "",
-    "src": "https://github.com/HariisV/Ticketing-React",
-    "type": "WEB"
-  },
-  {
-    "title": "Tickez Mobile App",
-    "status": "Demo",
-    "desc": "Cross-platform mobile version of Tickez built with React Native. Movie browsing, seat selection, and mobile-optimized experience.",
-    "tags": [
-      "React Native",
-      "Redux",
-      "Native Base"
-    ],
-    "wins": [],
-    "img": "tickiz-mobile",
-    "live": "",
-    "src": "https://github.com/HariisV/Ticketing-Mobile",
-    "type": "MOBILE"
-  },
-  {
-    "title": "zWallet Digital Wallet",
-    "status": "Demo",
-    "desc": "Digital wallet with Midtrans payment integration, money transfer, and transaction history. Features automatic top-up and fee-free transfers.",
-    "tags": [
-      "Next.js",
-      "Bootstrap",
-      "Redis",
-      "Express",
-      "Midtrans"
-    ],
-    "wins": [],
-    "img": "zwallet",
-    "live": "https://x-wallet.vercel.app/",
-    "src": "https://github.com/HariisV/XWallet",
-    "type": "WEB"
-  },
-  {
-    "title": "Hire Job Platform",
-    "status": "Demo",
-    "desc": "Job platform connecting job seekers with employers. Features project-based hiring, worker profiles, and communication tools.",
-    "tags": [
-      "React",
-      "Redis",
-      "Bootstrap",
-      "Express",
-      "MySQL"
-    ],
-    "wins": [],
-    "img": "hire",
-    "live": "",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "Coffee Shop E-commerce",
-    "status": "Demo",
-    "desc": "Online coffee shop with Midtrans payment integration. Admin dashboard for purchase management and monthly sales analytics.",
-    "tags": [
-      "React",
-      "Redis",
-      "Bootstrap",
-      "Express",
-      "Midtrans"
-    ],
-    "wins": [],
-    "img": "coffe-shop",
-    "live": "",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "Solusi Marketing Marketplace",
-    "status": "Live",
-    "desc": "Marketplace for selling digital items (games, accounts, etc.). Features balance system for easy purchasing and item management.",
-    "tags": [
-      "Laravel",
-      "Livewire",
-      "MySQL",
-      "Bootstrap"
-    ],
-    "wins": [],
-    "img": "solusi-digital",
-    "live": "https://solusimarketing.com/",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "DMA Dropship Platform",
-    "status": "Live",
-    "desc": "Dropshipping platform for buying and selling between admins and users. Features purchase tracking and expenditure management.",
-    "tags": [
-      "Laravel",
-      "Bootstrap",
-      "jQuery",
-      "MySQL"
-    ],
-    "wins": [],
-    "img": "dma",
-    "live": "https://dmadropship.com/",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "Eka Danta Learning Center",
-    "status": "Live",
-    "desc": "Learning Management System (LMS) with complex features using advanced jQuery and Ajax techniques. Comprehensive educational platform.",
-    "tags": [
-      "Laravel",
-      "Bootstrap",
-      "jQuery",
-      "Ajax",
-      "MySQL"
-    ],
-    "wins": [],
-    "img": "ekadanta",
-    "live": "https://ekadantalc.com/",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "PPDB SMKN 5 System",
-    "status": "Demo",
-    "desc": "New student admission website with registration, data verification, and online testing. Complete admission management system.",
-    "tags": [
-      "Laravel",
-      "Bootstrap",
-      "MySQL",
-      "PHP"
-    ],
-    "wins": [],
-    "img": "ppdb",
-    "live": "",
-    "src": "",
-    "type": "WEB"
-  },
-  {
-    "title": "Meduza Shop",
-    "status": "Demo",
-    "desc": "Simple online store using Laravel. My first freelance project — where I learned Laravel fundamentals and e-commerce development.",
-    "tags": [
-      "Laravel",
-      "Bootstrap",
-      "MySQL",
-      "PHP"
-    ],
-    "wins": [],
-    "img": "meduza",
-    "live": "",
-    "src": "https://github.com/HariisV/Meduza-Shop",
-    "type": "WEB"
   }
 ]

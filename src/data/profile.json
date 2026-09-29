@@ -1,76 +1,64 @@
 {
-  "name": "Haris Wahyudi",
-  "brand": "haris",
-  "site": "https://www.haris.my.id",
+  "name": "Alex Rivera",
+  "brand": "alex",
+  "site": "https://example.com",
   "seo": {
-    "title": "Haris Wahyudi — Software Engineer",
-    "description": "Full stack software engineer building web, mobile & AI products. 50+ projects shipped, Top 1% freelancer."
+    "title": "Alex Rivera — Software Engineer",
+    "description": "Sample portfolio built with Astro. Replace the files in src/data/ with your own content."
   },
   "ogImage": "/assets/og-image.png",
-  "footerNote": "made in Indonesia",
-  "careerStart": 2020,
+  "footerNote": "built with Astro",
+  "careerStart": 2019,
   "roles": [
     "Software Engineer",
     "Frontend Developer",
     "Backend Developer",
     "Full Stack Developer"
   ],
-  "description": "years of hands-on experience, a strong work ethic, adaptability, and dedication to delivering high-quality results.",
-  "tagline": "I have a passion for problem-solving, which fuels my persistence in overcoming challenges.",
+  "description": "years of hands-on experience, building web and mobile products end to end.",
+  "tagline": "I enjoy turning messy requirements into simple, reliable software.",
   "avatar": "/assets/avatar.webp",
-  "resume": "/cv/CV - Haris Wahyudi.pdf",
+  "resume": "/cv/sample-resume.pdf",
   "social": {
-    "github": "https://github.com/hariisV",
-    "linkedin": "https://linkedin.com/in/harisw"
+    "github": "https://github.com",
+    "linkedin": "https://www.linkedin.com"
   },
   "stats": {
-    "projects": 50,
-    "rating": 9.9
+    "projects": 30,
+    "rating": 9.5
   },
   "companies": [
     {
-      "name": "International Centre for Industrial Transformation",
-      "logo": "/assets/incit-logo.webp"
+      "name": "Northwind Labs",
+      "logo": "/assets/logos/northwind.webp"
     },
     {
-      "name": "Sustainable Living Lab",
-      "logo": "/assets/sl2-logo.webp"
+      "name": "Gigwise",
+      "logo": "/assets/logos/gigwise.webp"
     },
     {
-      "name": "Satria Nusa Enjinering",
-      "logo": "/assets/sne-logo.webp"
+      "name": "Kite Commerce",
+      "logo": "/assets/logos/kite.webp"
     },
     {
-      "name": "Healstation Lab",
-      "logo": "/assets/healstation-owl.webp"
+      "name": "Orbit Health",
+      "logo": "/assets/logos/orbit.webp"
     },
     {
-      "name": "Asia Cyber University",
-      "logo": "/assets/edu-unsia.webp"
+      "name": "Brightpath Studio",
+      "logo": "/assets/logos/brightpath.webp"
     },
     {
-      "name": "Ardata",
-      "logo": "/assets/ardata-logo.webp"
+      "name": "Acme Cloud",
+      "logo": "/assets/logos/acme.webp"
     },
     {
-      "name": "PT Digital Inovasi Global Indonesia",
-      "logo": "/assets/digi-logo.webp"
+      "name": "Lumen Finance",
+      "logo": "/assets/logos/lumen.webp"
     },
     {
-      "name": "Fazztrack",
-      "logo": "/assets/edu-fazztrack.webp"
-    },
-    {
-      "name": "DRH.co.id",
-      "logo": "/assets/drh-logo.webp"
-    },
-    {
-      "name": "Viracun",
-      "logo": "/assets/viracun-logo.webp"
-    },
-    {
-      "name": "K3Mart",
-      "logo": "/assets/k3mart-logo.webp"
+      "name": "Westbridge University",
+      "logo": "/assets/logos/westbridge.webp"
     }
   ],
   "techCdn": "/techstack/",

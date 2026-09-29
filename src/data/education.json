@@ -1,40 +1,29 @@
 [
   {
-    "period": "2022 — 2026",
-    "sub": "Jun 2022 – Mar 2026",
-    "logo": "/assets/edu-unsia.webp",
-    "name": "Asia Cyber University",
+    "period": "2015 — 2019",
+    "sub": "Sep 2015 – Jun 2019",
+    "logo": "/assets/logos/westbridge.webp",
+    "name": "Westbridge University",
     "degree": "Bachelor's Degree, Computer Science",
     "desc": [
-      "Graduated cum laude in Informatics with a 3.9 GPA — completed fully online while working full-time as an engineer.",
-      "My focus areas are Data Science, Machine Learning, and Software Engineering, with coursework spanning Cloud Computing, Data Science, and Web Development using MongoDB and JavaScript."
+      "Focused on software engineering, databases, and human-computer interaction.",
+      "Worked as a teaching assistant for the introductory web development course."
     ],
     "highlights": [
       {
-        "k": "Data Science thesis",
-        "t": "Detection of Suspicious Transactions Using the CatBoost Algorithm and CRISP-DM Methodology."
+        "k": "Thesis",
+        "t": "Predicting Delivery Delays with Gradient-Boosted Trees."
       }
     ]
   },
   {
-    "period": "2022",
-    "sub": "2022 · 3 months",
-    "logo": "/assets/edu-fazztrack.webp",
-    "name": "Fazztrack Bootcamp",
-    "degree": "Full-stack JavaScript",
+    "period": "2019",
+    "sub": "Mar 2019 – Jun 2019",
+    "logo": "/assets/logos/codecamp.webp",
+    "name": "CodeCamp Academy",
+    "degree": "Full Stack Web Development Bootcamp",
     "desc": [
-      "A 3-month, full-time bootcamp right after high school that shaped my growth both technically and personally — and led to my first job in tech."
-    ]
-  },
-  {
-    "period": "2018 — 2021",
-    "sub": "2018 – 2021",
-    "logo": "/assets/edu-smk5.webp",
-    "name": "SMKN 5 Telkom Banda Aceh",
-    "degree": "Computer & Information Sciences",
-    "desc": [
-      "Where it all started. I learned web and mobile development — HTML, CSS, JavaScript, and PHP for the web, and Flutter for mobile apps.",
-      "Along the way I built several real websites, including an online shop and a school profile site."
+      "Twelve-week program covering JavaScript, React, Node.js, and SQL, ending with a team capstone project."
     ]
   }
 ]

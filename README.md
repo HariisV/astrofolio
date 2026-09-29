@@ -1,10 +1,10 @@
-# Haris Wahyudi — Portfolio
+# Astro Developer Portfolio
 
-[![Portfolio preview](public/assets/og-image.png)](https://www.haris.my.id)
+![Portfolio preview with sample data](docs/preview.webp)
 
-Source code for my personal portfolio at **[haris.my.id](https://www.haris.my.id)**.
+A fast, static developer portfolio built with [Astro](https://astro.build). No client framework: the only JavaScript is a few KB of vanilla JS for project filters, count-up numbers, the nav caret, and "read more".
 
-Static site built with [Astro](https://astro.build). No client framework: the only JavaScript is a few KB of vanilla JS for project filters, count-up numbers, the nav caret, and "read more".
+This branch ships with **sample data** for a fictional developer, Alex Rivera. See it running with real content at **[haris.my.id](https://www.haris.my.id)**.
 
 ## Run locally
 
@@ -19,18 +19,20 @@ npm run check    # type-check .astro files
 
 `dist/` can be deployed to any static host (Vercel, Netlify, Cloudflare Pages, Firebase Hosting).
 
-## Editing content
+## Make it yours
 
-All content lives in `src/data/`, so updating the site needs no component changes.
+1. Edit the JSON files in `src/data/` (table below). Start with `profile.json`: it sets your name, brand, site URL, SEO title, and social links.
+2. Replace the sample images in `public/assets/` and `public/projects/`, and put your résumé in `public/cv/`.
+3. Run `npm run build` and deploy `dist/`.
 
 | File | What it holds |
 |---|---|
-| `profile.json` | Name, roles, social links, resume path, `careerStart` (drives every "X years" figure), and the company marquee |
+| `profile.json` | Name, `brand` (header logo), `site` URL, `seo` title/description, OG image, roles, social links, résumé path, `careerStart` (drives every "X years" figure), and the company marquee |
 | `jobs.json` | Work experience. `start`/`end` are `[year, month]`; omit `end` for a current role. Optional `clients` lists clients won through that role |
 | `education.json` | Education rows. Optional `highlights` renders extra bullet points (for example a thesis) |
 | `projects.json` | Projects. `type` is `"WEB"` or `"MOBILE"` and drives the filter tabs. Optional `cta` overrides the live-link button label |
 | `skills.json` | Skills tree. The `since` year is turned into years of experience automatically |
-| `testimonials.json` | Recommendations. Avatars live in `public/assets/testimonials/` |
+| `testimonials.json` | Recommendations. Leave `avatar` empty to show the person's initial instead |
 
 Years of experience and current-job durations are computed at build time and refreshed in the browser, so they stay correct without a rebuild.
 
@@ -40,11 +42,12 @@ Everything is self-hosted from `public/`; the page makes no requests to other do
 
 | Path | What |
 |---|---|
-| `public/assets/` | Avatar, company and school logos, testimonial avatars, OG image |
+| `public/assets/` | Avatar and OG image |
+| `public/assets/logos/` | Company and school logos |
 | `public/projects/` | Project screenshots (`<img>.webp`, matching `img` in `projects.json`) |
 | `public/techstack/` | Tech icons (`<icon>.webp`, matching `icon` in `skills.json`) |
 | `public/fonts/` | Instrument Sans and JetBrains Mono (variable woff2, declared in `global.css`) |
-| `public/cv/` | Resume PDF (`resume` in `profile.json`) |
+| `public/cv/` | Résumé PDF (`resume` in `profile.json`) |
 
 ## Performance notes
 
@@ -55,19 +58,15 @@ Everything is self-hosted from `public/`; the page makes no requests to other do
 - The loader shows once per session (sessionStorage).
 - `prefers-reduced-motion` turns off the loader, orbit, marquee, and reveal animations.
 
-## Reusing this code
+## Branches
 
-You're welcome to learn from the code or use it as a starting point for your own site. If you do, please replace everything in `src/data/` and the personal files in `public/` (listed below) before deploying. Don't publish a copy of this site with my name, résumé, or client work on it.
+- `main`: the code with sample data. Fork or clone this one.
+- `personal`: my own site content, deployed to haris.my.id. Code changes land on `main` first and are merged into `personal`.
 
 ## License
 
-The **source code** (components, layouts, styles, scripts, and config) is released under the [MIT License](LICENSE).
+The source code and the sample content on `main` are released under the [MIT License](LICENSE).
 
-The **content** is not covered by the MIT License and remains © Haris Wahyudi, all rights reserved. That includes:
+The content on the `personal` branch (text, photos, résumé, project screenshots, testimonials, and client logos) is **not** covered by the MIT License and remains © Haris Wahyudi, all rights reserved. Please don't republish it.
 
-- All text and data in `src/data/`
-- My photo, résumé, and OG image (`public/assets/avatar.*`, `public/assets/og-image.png`, `public/cv/`)
-- Project screenshots in `public/projects/`
-- Testimonial avatars in `public/assets/testimonials/`
-
-Company, school, and technology logos are trademarks of their respective owners. The fonts in `public/fonts/` are licensed under the SIL Open Font License.
+Technology logos in `public/techstack/` are trademarks of their respective owners. The fonts in `public/fonts/` are licensed under the SIL Open Font License.

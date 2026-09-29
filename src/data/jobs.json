@@ -1,176 +1,100 @@
 [
   {
-    "company": "International Centre for Industrial Transformation",
-    "role": "Full Stack Developer",
-    "start": [
-      2024,
-      10
-    ],
-    "type": "Full-time",
-    "location": "Singapore · Hybrid",
-    "logo": "/assets/incit-logo.webp",
-    "story": [
-      "Building AI-powered products and production-grade web & mobile apps for a global industrial transformation organization."
-    ],
-    "wins": [
-      {
-        "m": "70%",
-        "k": "AI adoption",
-        "t": "Helped 14 engineers adopt AI-assisted coding, debugging & automation."
-      },
-      {
-        "m": "0 incidents",
-        "k": "OPERI mobile app",
-        "t": "React Native for iOS & Android — in-app purchases, offline-first, Drizzle ORM."
-      },
-      {
-        "m": "−80%",
-        "k": "IC4IT AI chatbot",
-        "t": "FastAPI + RAG with auto-synced website knowledge, cutting support workload."
-      },
-      {
-        "m": "60% faster",
-        "k": "Reliability",
-        "t": "Unit & E2E tests plus server health monitoring for faster error detection."
-      },
-      {
-        "m": "4 portals",
-        "k": "Frontend modernization",
-        "t": "React, TypeScript, Tailwind & TanStack with a standardized multilingual UX."
-      },
-      {
-        "m": "$20k / yr",
-        "k": "Task management system",
-        "t": "Built and shipped in 3 days, replacing costly third-party tools."
-      }
-    ],
-    "link": "https://incit.org/operi",
-    "linkLabel": "View OPERI"
-  },
-  {
-    "company": "Projects.co.id",
-    "role": "Freelance Website Developer",
+    "company": "Northwind Labs",
+    "role": "Senior Full Stack Engineer",
     "start": [
       2023,
-      4
+      2
     ],
-    "type": "Freelance",
-    "location": "Indonesia · Remote",
-    "logo": "/assets/projects-co-id-logo.webp",
+    "type": "Full-time",
+    "location": "Remote",
+    "logo": "/assets/logos/northwind.webp",
     "story": [
-      "Ranked in the Top 1% of freelancers on Projects.co.id with a 9.9/10 client satisfaction rating, delivering web and mobile apps for multiple clients."
+      "Leading a small product team that builds analytics tools for mid-size retailers."
     ],
     "wins": [
       {
-        "m": "500k+ users",
-        "k": "Viracun web & app",
-        "t": "Rebuilt with React + Express.js, then shipped the React Native app."
+        "m": "−40%",
+        "k": "Page load time",
+        "t": "Moved the dashboard to server rendering and trimmed the client bundle."
       },
       {
-        "m": "−90%",
-        "k": "K3Mart CRM",
-        "t": "AI WhatsApp automation & Google Maps review bot for a national retail chain."
+        "m": "3 weeks",
+        "k": "Mobile companion app",
+        "t": "Shipped a React Native app for store managers on iOS & Android."
       },
       {
-        "m": "3.0 → 4.5★",
-        "k": "AGPAII Digital",
-        "t": "100k+ download app — security fixes, performance tuning, new forum features."
+        "m": "99.9%",
+        "k": "Uptime",
+        "t": "Added health checks, alerting, and zero-downtime deploys."
+      }
+    ],
+    "link": "https://example.com",
+    "linkLabel": "Visit company"
+  },
+  {
+    "company": "Gigwise",
+    "role": "Freelance Developer",
+    "start": [
+      2021,
+      5
+    ],
+    "end": [
+      2023,
+      1
+    ],
+    "type": "Freelance",
+    "location": "Remote",
+    "logo": "/assets/logos/gigwise.webp",
+    "story": [
+      "Delivered web and mobile projects for clients found through the Gigwise marketplace."
+    ],
+    "wins": [
+      {
+        "m": "4.9★",
+        "k": "Client rating",
+        "t": "Average rating across 20+ completed contracts."
       }
     ],
     "clients": [
       {
-        "name": "PT Ardata Digital Asia",
-        "logo": "/assets/ardata-logo.webp",
-        "m": "4 projects",
-        "t": "Solo full-stack dev: build, deployment, security fixes & client comms."
+        "name": "Kite Commerce",
+        "logo": "/assets/logos/kite.webp",
+        "m": "3 projects",
+        "t": "Storefront, admin panel, and payment integration."
       },
       {
-        "name": "PT Digital Inovasi Global Indonesia",
-        "logo": "/assets/digi-logo.webp",
-        "m": "3 apps",
-        "t": "PM, DevOps & NestJS backend for Qi Wellness, Newton Lifestyle & Arena Padel."
+        "name": "Orbit Health",
+        "logo": "/assets/logos/orbit.webp",
+        "m": "2 apps",
+        "t": "Patient booking app and clinic dashboard."
       }
     ],
-    "link": "https://projects.co.id/public/browse_users/view/b37d1e/haris-wahyudi",
+    "link": "https://example.com",
     "linkLabel": "View profile"
   },
   {
-    "company": "Healstation Lab",
-    "role": "Full Stack Engineer",
+    "company": "Brightpath Studio",
+    "role": "Junior Web Developer",
     "start": [
-      2023,
+      2019,
+      7
+    ],
+    "end": [
+      2021,
       4
     ],
-    "end": [
-      2024,
-      10
-    ],
     "type": "Full-time",
-    "location": "South Jakarta · Hybrid",
-    "logo": "/assets/healstation-owl.webp",
+    "location": "On-site",
+    "logo": "/assets/logos/brightpath.webp",
     "story": [
-      "\"Want to grow fast? Join a software house.\" At Healstation I led teams, ran production infrastructure, and shipped products for international clients."
+      "Built marketing sites and small web apps for agency clients."
     ],
     "wins": [
       {
-        "m": "8 people",
-        "k": "Team lead",
-        "t": "Led up to 8 members across 4 concurrent projects to production."
-      },
-      {
-        "m": "70% faster",
-        "k": "Cloud & CI/CD",
-        "t": "Ran AWS & Azure servers with GitHub Actions, monitoring & optimization."
-      },
-      {
-        "m": "50k+ MAU",
-        "k": "Caffeine app",
-        "t": "React Native app for a South Korean coffee brand with multiple payment & delivery options."
-      },
-      {
-        "m": "AI",
-        "k": "Legal-tech platform",
-        "t": "AI legal knowledge & expert discovery for Korean startups, built with React & Express.js."
-      }
-    ]
-  },
-  {
-    "company": "Sustainable Living Lab (SL2)",
-    "role": "Full Stack Website Developer",
-    "start": [
-      2021,
-      12
-    ],
-    "end": [
-      2023,
-      5
-    ],
-    "type": "Full-time",
-    "location": "Singapore",
-    "logo": "/assets/sl2-logo.webp",
-    "story": [
-      "My first role in tech — planning and delivering scalable web applications aligned with client and business needs."
-    ],
-    "wins": [
-      {
-        "m": "Award",
-        "k": "SPRYX ESG platform",
-        "t": "Laravel & Livewire; recognized at BNI Challenge #1 for automated ESG reporting."
-      },
-      {
-        "m": "< 24h",
-        "k": "Intel AI4FW platform",
-        "t": "Custom WordPress learning platform for Intel’s AI for Future Workforce program."
-      },
-      {
-        "m": "E2E tested",
-        "k": "NextGen AI4FW",
-        "t": "React + Express.js platform with Playwright tests for release quality."
-      },
-      {
-        "m": "AWS",
-        "k": "Eddy4Teachers & tools",
-        "t": "Supervised technical implementation; built a purchase system on AWS Lightsail."
+        "m": "15+ sites",
+        "k": "Client websites",
+        "t": "Responsive sites with a reusable component library."
       }
     ]
   }
