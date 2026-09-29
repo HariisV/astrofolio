@@ -13,7 +13,7 @@ const floaters = [
     {floaters.map(([n, pos, r, d]) => (
       <div class="loader__float" style={`${pos};--r:${r}deg;animation-delay:${d}s`}><img src={`${T}${n}.webp`} alt="" width="64" height="64" /></div>
     ))}
-    <div class="loader__badge">Software Engineer</div>
+    <div class="loader__badge">{profile.roles[0]}</div>
     <div class="term">
       <div class="term__bar"><i style="background:#FF5F57"></i><i style="background:#FFBD2E"></i><i style="background:#28C840"></i></div>
       <div class="term__body">

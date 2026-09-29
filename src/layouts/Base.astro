@@ -27,7 +27,7 @@ const image = new URL(profile.ogImage, Astro.site).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href={profile.favicon} sizes="32x32" />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/instrument-sans-latin.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/jetbrains-mono-latin.woff2" crossorigin />
     <link rel="preload" as="image" href={profile.avatar} />

@@ -301,6 +301,8 @@ section.block { border-bottom: 1px solid var(--line); }
 .foot__bar { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); }
 @media (max-width: 640px) { .foot { padding-top: 80px; } .foot__grid { padding-bottom: 64px; } .foot__bar { flex-direction: column; align-items: flex-start; } }
 .foot__bar small { font-family: var(--mono); font-size: 12px; color: #8FA6AE; }
+.foot__credit { color: #D5E1E5; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(213,225,229,.35); }
+.foot__credit:hover { color: #6FCFDD; }
 .foot__top { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 12px; color: #D5E1E5; }
 .foot__top .icon { width: 16px; height: 16px; transform: rotate(180deg); transition: transform .25s var(--ease); }
 .foot__top:hover { color: #6FCFDD; }

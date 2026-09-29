@@ -6,8 +6,13 @@
     "title": "Alex Rivera — Software Engineer",
     "description": "Sample portfolio built with Astro. Replace the files in src/data/ with your own content."
   },
-  "ogImage": "/assets/og-image.png",
+  "ogImage": "/assets/sample/og-image.png",
+  "favicon": "/assets/sample/favicon.ico",
   "footerNote": "built with Astro",
+  "credit": {
+    "text": "Template by Haris Wahyudi",
+    "url": "https://www.haris.my.id"
+  },
   "careerStart": 2019,
   "roles": [
     "Software Engineer",
@@ -17,7 +22,7 @@
   ],
   "description": "years of hands-on experience, building web and mobile products end to end.",
   "tagline": "I enjoy turning messy requirements into simple, reliable software.",
-  "avatar": "/assets/avatar.webp",
+  "avatar": "/assets/sample/avatar.webp",
   "resume": "/cv/sample-resume.pdf",
   "social": {
     "github": "https://github.com",

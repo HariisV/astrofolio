@@ -22,12 +22,13 @@ npm run check    # type-check .astro files
 ## Make it yours
 
 1. Edit the JSON files in `src/data/` (table below). Start with `profile.json`: it sets your name, brand, site URL, SEO title, and social links.
-2. Replace the sample images in `public/assets/` and `public/projects/`, and put your résumé in `public/cv/`.
-3. Run `npm run build` and deploy `dist/`.
+2. Replace the sample images in `public/assets/sample/`, `public/assets/logos/`, and `public/projects/`, and put your résumé in `public/cv/`. Use new file names rather than overwriting, because `/assets/` files may be served with long-lived cache headers.
+3. Please keep the footer credit (`credit` in `profile.json`) linking back to [haris.my.id](https://www.haris.my.id).
+4. Run `npm run build` and deploy `dist/`.
 
 | File | What it holds |
 |---|---|
-| `profile.json` | Name, `brand` (header logo), `site` URL, `seo` title/description, OG image, roles, social links, résumé path, `careerStart` (drives every "X years" figure), and the company marquee |
+| `profile.json` | Name, `brand` (header logo), `site` URL, `seo` title/description, OG image, favicon, roles (the first one also labels the loader), social links, résumé path, `careerStart` (drives every "X years" figure), footer `credit`, and the company marquee |
 | `jobs.json` | Work experience. `start`/`end` are `[year, month]`; omit `end` for a current role. Optional `clients` lists clients won through that role |
 | `education.json` | Education rows. Optional `highlights` renders extra bullet points (for example a thesis) |
 | `projects.json` | Projects. `type` is `"WEB"` or `"MOBILE"` and drives the filter tabs. Optional `cta` overrides the live-link button label |
@@ -42,7 +43,7 @@ Everything is self-hosted from `public/`; the page makes no requests to other do
 
 | Path | What |
 |---|---|
-| `public/assets/` | Avatar and OG image |
+| `public/assets/sample/` | Sample avatar, OG image, and favicon |
 | `public/assets/logos/` | Company and school logos |
 | `public/projects/` | Project screenshots (`<img>.webp`, matching `img` in `projects.json`) |
 | `public/techstack/` | Tech icons (`<icon>.webp`, matching `icon` in `skills.json`) |
