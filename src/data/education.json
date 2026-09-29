@@ -8,6 +8,12 @@
     "desc": [
       "Graduated cum laude in Informatics with a 3.9 GPA — completed fully online while working full-time as an engineer.",
       "My focus areas are Data Science, Machine Learning, and Software Engineering, with coursework spanning Cloud Computing, Data Science, and Web Development using MongoDB and JavaScript."
+    ],
+    "highlights": [
+      {
+        "k": "Data Science thesis",
+        "t": "Detection of Suspicious Transactions Using the CatBoost Algorithm and CRISP-DM Methodology."
+      }
     ]
   },
   {

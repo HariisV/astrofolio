@@ -111,6 +111,30 @@ import profile from '../data/profile.json';
     moreBtn.addEventListener('click', () => { open = !open; render(); });
   }
 
+  // Header: highlight the section in view and park the caret after its link
+  const spy = document.querySelector('[data-spy]');
+  if (spy && 'IntersectionObserver' in window) {
+    const caret = spy.querySelector('.nav-caret');
+    const links = [...spy.querySelectorAll('a')];
+    let active = null;
+    const place = () => {
+      if (!active) return;
+      caret.style.setProperty('--x', `${active.offsetLeft + active.offsetWidth}px`);
+      caret.classList.add('is-on');
+    };
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const link = links.find((a) => a.hash === `#${e.target.id}`);
+      if (!link || link === active) return;
+      active?.removeAttribute('aria-current');
+      active = link; active.setAttribute('aria-current', 'true');
+      place();
+    }), { rootMargin: '-45% 0px -50% 0px' });
+    links.forEach((a) => { const s = document.querySelector(a.hash); if (s) io.observe(s); });
+    addEventListener('resize', place);
+    document.fonts?.ready.then(place);
+  }
+
   // Testimonials: read more
   document.querySelectorAll('[data-toggle]').forEach((b) => b.addEventListener('click', () => {
     const card = b.closest('.quote'), isOpen = card.classList.toggle('is-open');

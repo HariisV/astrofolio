@@ -75,11 +75,20 @@
         "m": "3.0 → 4.5★",
         "k": "AGPAII Digital",
         "t": "100k+ download app — security fixes, performance tuning, new forum features."
+      }
+    ],
+    "clients": [
+      {
+        "name": "PT Ardata Digital Asia",
+        "logo": "/assets/ardata-logo.webp",
+        "m": "4 projects",
+        "t": "Solo full-stack dev: build, deployment, security fixes & client comms."
       },
       {
-        "m": "4 projects",
-        "k": "Solo & lead roles",
-        "t": "Solo dev for Ardata; PM, DevOps & NestJS backend for Qiwellness, Newton Lifestyle & Arena Padel."
+        "name": "PT Digital Inovasi Global Indonesia",
+        "logo": "/assets/digi-logo.webp",
+        "m": "3 apps",
+        "t": "PM, DevOps & NestJS backend for Qi Wellness, Newton Lifestyle & Arena Padel."
       }
     ],
     "link": "https://projects.co.id/public/browse_users/view/b37d1e/haris-wahyudi",

@@ -41,6 +41,16 @@ const years = now.getFullYear() - profile.careerStart;
           {j.wins.length > 0 && (
             <ul class="wins">{j.wins.map((w: any) => <li><span><strong>{w.k}</strong> — {w.t} <em>{w.m}</em></span></li>)}</ul>
           )}
+          {j.clients?.length > 0 && (
+            <div class="subs">
+              <p class="subs__label mono">Clients via {j.company}</p>
+              <ul class="wins subs__list">
+                {j.clients.map((c: any) => (
+                  <li><img src={c.logo} alt="" width="28" height="28" loading="lazy" decoding="async" /><span><strong>{c.name}</strong> — {c.t} <em>{c.m}</em></span></li>
+                ))}
+              </ul>
+            </div>
+          )}
           {j.link && <a class="btn btn--sm" style="align-self:flex-start" href={j.link} target="_blank" rel="noopener">{j.linkLabel} <Icon name="arrow" /></a>}
         </article>
       ))}

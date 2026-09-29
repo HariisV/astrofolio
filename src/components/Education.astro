@@ -8,7 +8,7 @@ import education from '../data/education.json';
       <h2>Always Learning</h2>
     </div>
     <div class="rails">
-      {education.map((e) => (
+      {education.map((e: any) => (
         <article class="row reveal">
           <div class="row__head">
             <img class="logo-box" style="width:64px;height:64px;border-radius:14px;padding:4px" src={e.logo} alt={e.name} width="64" height="64" loading="lazy" decoding="async" />
@@ -18,7 +18,10 @@ import education from '../data/education.json';
             </div>
             <span class="date-pill">{e.sub}</span>
           </div>
-          <div class="row__story" style="font-size:16px;line-height:1.85">{e.desc.map((d) => <p>{d}</p>)}</div>
+          <div class="row__story" style="font-size:16px;line-height:1.85">{e.desc.map((d: string) => <p>{d}</p>)}</div>
+          {e.highlights?.length > 0 && (
+            <ul class="wins">{e.highlights.map((h: any) => <li><span><strong>{h.k}</strong> — {h.t}</span></li>)}</ul>
+          )}
         </article>
       ))}
     </div>

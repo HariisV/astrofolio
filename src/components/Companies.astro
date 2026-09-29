@@ -2,19 +2,22 @@
 import profile from '../data/profile.json';
 import jobs from '../data/jobs.json';
 const current = new Set(jobs.filter((j: any) => !j.end).map((j) => j.company));
-const items = [...profile.companies, ...profile.companies, ...profile.companies, ...profile.companies];
+// Two rows drifting in opposite directions; each row repeats its half 4× for a seamless -50% loop
+const rows = [0, 1].map((r) => profile.companies.filter((_, i) => i % 2 === r));
 ---
 <section class="companies reveal">
   <div class="wrap">
     <p class="companies__label">Companies I’ve worked with &amp; grown alongside as an engineer.</p>
     <div class="marquee">
-      <div class="marquee__track" style={`animation-duration:${profile.companies.length * 7}s`}>
-        {items.map((c, i) => (
-          <div class={`marquee__item${current.has(c.name) ? ' marquee__item--now' : ''}`} aria-hidden={i >= profile.companies.length ? 'true' : undefined}>
-            <img src={c.logo} alt="" width="56" height="56" loading="lazy" decoding="async" /><span>{c.name}</span>
-          </div>
-        ))}
-      </div>
+      {rows.map((row, r) => (
+        <div class={`marquee__track${r ? ' marquee__track--rev' : ''}`} style={`animation-duration:${row.length * 9}s`}>
+          {[...row, ...row, ...row, ...row].map((c, i) => (
+            <div class={`marquee__item${current.has(c.name) ? ' marquee__item--now' : ''}`} aria-hidden={i >= row.length ? 'true' : undefined}>
+              <img src={c.logo} alt="" width="52" height="52" loading="lazy" decoding="async" /><span>{c.name}</span>
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   </div>
 </section>

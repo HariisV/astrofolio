@@ -7,8 +7,9 @@
     "wins": [],
     "img": "operi",
     "live": "https://incit.org/operi",
+    "cta": "Visit OPERI",
     "src": "",
-    "mobile": true
+    "type": "MOBILE"
   },
   {
     "title": "Viracun Learning Platform",
@@ -28,7 +29,7 @@
     "img": "viracun",
     "live": "https://viracun.id/",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Viracun Mobile App",
@@ -42,7 +43,7 @@
     "img": "viracun-mobile",
     "live": "https://play.google.com/store/apps/details?id=id.viracun.app&hl=id",
     "src": "",
-    "mobile": true
+    "type": "MOBILE"
   },
   {
     "title": "K3Mart CRM",
@@ -56,7 +57,7 @@
     "img": "k3mart-crm",
     "live": "",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Qi Wellness & Lifestyle App",
@@ -71,7 +72,7 @@
     "img": "qi-wellness",
     "live": "https://play.google.com/store/apps/details?id=com.qiwellness&hl=id",
     "src": "",
-    "mobile": true
+    "type": "MOBILE"
   },
   {
     "title": "Seng Hap 1881 — Consignment Platform",
@@ -86,7 +87,7 @@
     "img": "senghap",
     "live": "https://senghap1881.com",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Caffeine Coffee App",
@@ -102,7 +103,7 @@
     "img": "caffein",
     "live": "https://play.google.com/store/apps/details?id=com.caffeineism",
     "src": "",
-    "mobile": true
+    "type": "MOBILE"
   },
   {
     "title": "TryoutASN",
@@ -117,7 +118,7 @@
     "img": "tryoutasn-mobile",
     "live": "https://play.google.com/store/apps/details?id=com.tryoutasn",
     "src": "",
-    "mobile": true
+    "type": "MOBILE"
   },
   {
     "title": "DRH.co.id — Veterinary Clinic",
@@ -134,7 +135,7 @@
     "img": "drh",
     "live": "https://drh.co.id/",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Newton Lifestyle Hub",
@@ -149,7 +150,7 @@
     "img": "newton",
     "live": "https://play.google.com/store/apps/details?id=com.digitalinovasiglobal.newtonpadel",
     "src": "",
-    "mobile": true
+    "type": "MOBILE"
   },
   {
     "title": "SickGPT Health Assistant",
@@ -168,7 +169,7 @@
     "img": "sickgpt",
     "live": "https://sickgpt.io/",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Brainfit Online",
@@ -184,7 +185,7 @@
     "img": "brainfit",
     "live": "http://brainfitonline.co.id/",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "BPT App",
@@ -200,7 +201,7 @@
     "img": "bpt",
     "live": "https://play.google.com/store/apps/details?id=com.bpt_app",
     "src": "",
-    "mobile": true
+    "type": "MOBILE"
   },
   {
     "title": "My Bucket Social Media",
@@ -219,7 +220,7 @@
     "img": "my-bucket",
     "live": "https://my-bucket.co.kr/",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Semina Event Booking",
@@ -236,7 +237,7 @@
     "img": "semina",
     "live": "",
     "src": "https://github.com/HariisV/semina-backend",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Shop DRH.co.id — Veterinary Marketplace",
@@ -253,7 +254,7 @@
     "img": "shop-drh",
     "live": "https://drh.co.id/",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Luxspace PWA",
@@ -273,7 +274,7 @@
     "img": "luxspace",
     "live": "https://luxspace-pwa.vercel.app/",
     "src": "https://github.com/HariisV/Luxspace_PWA",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "StoreGG Topup Game",
@@ -289,7 +290,7 @@
     "img": "storegg",
     "live": "",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Tickez Web App",
@@ -306,7 +307,7 @@
     "img": "tickitz-web",
     "live": "",
     "src": "https://github.com/HariisV/Ticketing-React",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Tickez Mobile App",
@@ -321,7 +322,7 @@
     "img": "tickiz-mobile",
     "live": "",
     "src": "https://github.com/HariisV/Ticketing-Mobile",
-    "mobile": true
+    "type": "MOBILE"
   },
   {
     "title": "zWallet Digital Wallet",
@@ -338,7 +339,7 @@
     "img": "zwallet",
     "live": "https://x-wallet.vercel.app/",
     "src": "https://github.com/HariisV/XWallet",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Hire Job Platform",
@@ -355,7 +356,7 @@
     "img": "hire",
     "live": "",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Coffee Shop E-commerce",
@@ -372,7 +373,7 @@
     "img": "coffe-shop",
     "live": "",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Solusi Marketing Marketplace",
@@ -388,7 +389,7 @@
     "img": "solusi-digital",
     "live": "https://solusimarketing.com/",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "DMA Dropship Platform",
@@ -404,7 +405,7 @@
     "img": "dma",
     "live": "https://dmadropship.com/",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Eka Danta Learning Center",
@@ -421,7 +422,7 @@
     "img": "ekadanta",
     "live": "https://ekadantalc.com/",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "PPDB SMKN 5 System",
@@ -437,7 +438,7 @@
     "img": "ppdb",
     "live": "",
     "src": "",
-    "mobile": false
+    "type": "WEB"
   },
   {
     "title": "Meduza Shop",
@@ -453,6 +454,6 @@
     "img": "meduza",
     "live": "",
     "src": "https://github.com/HariisV/Meduza-Shop",
-    "mobile": false
+    "type": "WEB"
   }
 ]

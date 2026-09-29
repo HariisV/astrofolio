@@ -3,11 +3,15 @@ import Icon from './Icon.astro';
 import projects from '../data/projects.json';
 import profile from '../data/profile.json';
 const LIMIT = 10;
-const count = {
-  All: projects.length,
-  Web: projects.filter((p) => !p.mobile).length,
-  Mobile: projects.filter((p) => p.mobile).length,
-};
+const TYPES = {
+  WEB: { tab: 'Web', label: 'Web App' },
+  MOBILE: { tab: 'Mobile', label: 'Mobile App' },
+} as const;
+type ProjectType = keyof typeof TYPES;
+const filters = [
+  ['All', 'All', projects.length],
+  ...Object.entries(TYPES).map(([k, t]) => [k, t.tab, projects.filter((p) => p.type === k).length]),
+];
 const liveLabel = (url: string) =>
   url.includes('play.google.com')
     ? 'Get it on Google Play'
@@ -34,13 +38,13 @@ const liveLabel = (url: string) =>
         <div class="proj-bar__rule"></div>
         <div class="seg" role="group" aria-label="Filter projects">
           {
-            Object.entries(count).map(([k, n], i) => (
+            filters.map(([k, tab, n], i) => (
               <button
                 type="button"
                 data-filter={k}
                 aria-pressed={i === 0 ? 'true' : 'false'}
               >
-                {k} ({n})
+                {tab} ({n})
               </button>
             ))
           }
@@ -51,7 +55,7 @@ const liveLabel = (url: string) =>
           projects.map((p, i) => (
             <article
               class={`card reveal${i === 0 ? ' card--featured' : ''}`}
-              data-kind={p.mobile ? 'Mobile' : 'Web'}
+              data-kind={p.type}
               hidden={i >= LIMIT}
             >
               <div class="card__visual">
@@ -71,7 +75,7 @@ const liveLabel = (url: string) =>
                   <>
                     <b data-num>{String(i + 1).padStart(2, '0')}</b>
                     <i />
-                    <span>{p.mobile ? 'Mobile App' : 'Web App'}</span>
+                    <span>{TYPES[p.type as ProjectType].label}</span>
                   </>
                 </div>
                 <h4>{p.title}</h4>
@@ -91,7 +95,7 @@ const liveLabel = (url: string) =>
                     </div>
                   ) : (
                     <a class="card__cta" href={p.live} target="_blank" rel="noopener">
-                      <span>{liveLabel(p.live)}</span>
+                      <span>{p.cta ?? liveLabel(p.live)}</span>
                       <b><Icon name="arrow" /></b>
                     </a>
                   )}
