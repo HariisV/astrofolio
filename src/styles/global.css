@@ -124,6 +124,8 @@ section.block { border-bottom: 1px solid var(--line); }
 .intro__icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--line); background: #fff; color: var(--body); font-size: 20px; transition: all .25s var(--ease); }
 .intro__icon:hover { border-color: var(--teal); color: var(--teal-d); transform: translateY(-2px); }
 @media (max-width: 480px) { .intro__stats div { padding: 0 16px; } .intro__stats dd { font-size: 11px; } }
+/* Stacked hero (below the 2 × 380px + gap + gutters breakpoint): photo first */
+@media (max-width: 895px) { .hero__grid { grid-template-columns: 1fr; gap: 40px; } .orbit { order: -1; width: min(100%, 440px); } }
 .orbit { position: relative; width: min(100%, 540px); aspect-ratio: 1; container-type: inline-size; margin: 0 auto; }
 .orbit__ring { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; border: 1px dashed #CBD5E1; }
 .orbit__photo { position: absolute; left: 50%; top: 50%; width: 40cqw; height: 40cqw; margin: -20cqw 0 0 -20cqw; border-radius: 50%; overflow: hidden; background: var(--teal); border: 4px solid #fff; box-shadow: 0 20px 50px rgba(23,162,184,.35); }
@@ -198,6 +200,10 @@ section.block { border-bottom: 1px solid var(--line); }
 .round:hover { border-color: var(--teal-d); color: var(--teal-d); background: var(--teal-bg); }
 .round--dark { background: var(--ink); border-color: var(--ink); color: #fff; }
 .card:hover .round--dark { background: var(--teal); border-color: var(--teal); color: #fff; transform: rotate(45deg); }
+.card__cta { display: inline-flex; align-items: center; gap: 14px; padding: 6px 6px 6px 20px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; transition: background .3s var(--ease); }
+.card__cta b { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--teal); font-size: 16px; transition: transform .4s var(--ease), background .3s var(--ease), color .3s var(--ease); }
+.card:hover .card__cta { background: var(--teal-d); }
+.card:hover .card__cta b { transform: rotate(45deg); background: #fff; color: var(--teal-d); }
 .card--featured { grid-column: 1 / -1; flex-direction: row; }
 .card--featured .card__visual { flex: 1.3 1 420px; min-height: 380px; border-bottom: 0; border-right: 1px solid var(--line); }
 .card--featured .card__frame { left: 8%; right: 8%; top: 32px; }

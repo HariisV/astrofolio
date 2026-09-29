@@ -8,7 +8,7 @@
     "img": "operi",
     "live": "https://incit.org/operi",
     "src": "",
-    "mobile": false
+    "mobile": true
   },
   {
     "title": "Viracun Learning Platform",
@@ -31,32 +31,45 @@
     "mobile": false
   },
   {
+    "title": "Viracun Mobile App",
+    "status": "Live",
+    "desc": "Mobile companion to the Viracun learning platform for CPNS & PPPK exam prep, available on both the App Store (iOS) and Google Play (Android). Candidates study complete materials, take practice tryouts, and track their scores and progress on the go, fully synced with their web account.",
+    "tags": [
+      "React Native",
+      "Gluestack"
+    ],
+    "wins": [],
+    "img": "viracun-mobile",
+    "live": "https://play.google.com/store/apps/details?id=id.viracun.app&hl=id",
+    "src": "",
+    "mobile": true
+  },
+  {
+    "title": "K3Mart CRM",
+    "status": "Live",
+    "desc": "Omnichannel customer service CRM for K3Mart that brings Instagram DMs, WhatsApp chats, and Google Maps reviews into one inbox. An AI chatbot answers customer messages and auto-replies to Maps reviews, while a dashboard tracks response time, open tickets, and rating trends across outlets.",
+    "tags": [
+      "Next.js",
+      "GCP"
+    ],
+    "wins": [],
+    "img": "k3mart-crm",
+    "live": "",
+    "src": "",
+    "mobile": false
+  },
+  {
     "title": "Qi Wellness & Lifestyle App",
     "status": "Live",
     "desc": "Mobile booking app for a wellness & spa brand. Customers pick an outlet, choose a room tier, and book treatments, with social login, saved payment methods, and a membership points program.",
     "tags": [
-      "React Native Expo",
+      "Expo",
       "NestJS",
       "PostgreSQL"
     ],
     "wins": [],
     "img": "qi-wellness",
     "live": "https://play.google.com/store/apps/details?id=com.qiwellness&hl=id",
-    "src": "",
-    "mobile": true
-  },
-  {
-    "title": "Newton Lifestyle Hub",
-    "status": "Live",
-    "desc": "Official Newton app for Android & iOS — book activities, order via QR, pay in-app, and track your transaction history. Backed by an admin dashboard with analytics, order management, POS, and payroll.",
-    "tags": [
-      "React Native Expo",
-      "NestJS",
-      "PostgreSQL"
-    ],
-    "wins": [],
-    "img": "newton",
-    "live": "https://play.google.com/store/apps/details?id=com.digitalinovasiglobal.newtonpadel",
     "src": "",
     "mobile": true
   },
@@ -98,7 +111,7 @@
     "tags": [
       "Laravel",
       "React Native",
-      "Native Base"
+      "Gluestack"
     ],
     "wins": [],
     "img": "tryoutasn-mobile",
@@ -122,6 +135,21 @@
     "live": "https://drh.co.id/",
     "src": "",
     "mobile": false
+  },
+  {
+    "title": "Newton Lifestyle Hub",
+    "status": "Live",
+    "desc": "Official Newton app for Android & iOS — book activities, order via QR, pay in-app, and track your transaction history. Backed by an admin dashboard with analytics, order management, POS, and payroll.",
+    "tags": [
+      "Expo",
+      "NestJS",
+      "PostgreSQL"
+    ],
+    "wins": [],
+    "img": "newton",
+    "live": "https://play.google.com/store/apps/details?id=com.digitalinovasiglobal.newtonpadel",
+    "src": "",
+    "mobile": true
   },
   {
     "title": "SickGPT Health Assistant",
