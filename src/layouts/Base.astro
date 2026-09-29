@@ -1,9 +1,10 @@
 ---
 import '../styles/global.css';
+import profile from '../data/profile.json';
 interface Props { title: string; description: string }
 const { title, description } = Astro.props;
 const url = new URL(Astro.url.pathname, Astro.site).href;
-const image = new URL('/assets/og-image.png', Astro.site).href;
+const image = new URL(profile.ogImage, Astro.site).href;
 ---
 <!doctype html>
 <html lang="en">
@@ -16,12 +17,12 @@ const image = new URL('/assets/og-image.png', Astro.site).href;
     <meta property="og:description" content={description} />
     <link rel="canonical" href={url} />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Haris Wahyudi" />
+    <meta property="og:site_name" content={profile.name} />
     <meta property="og:url" content={url} />
     <meta property="og:image" content={image} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Haris Wahyudi" />
+    <meta property="og:image:alt" content={profile.name} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -29,7 +30,7 @@ const image = new URL('/assets/og-image.png', Astro.site).href;
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/instrument-sans-latin.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/jetbrains-mono-latin.woff2" crossorigin />
-    <link rel="preload" as="image" href="/assets/avatar.webp" />
+    <link rel="preload" as="image" href={profile.avatar} />
     <!-- Full build loader on first visit; a quick 1s replay once it has been seen. Page scroll is locked while it runs. -->
     <script is:inline>
       (function () {

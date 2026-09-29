@@ -1,5 +1,13 @@
 {
   "name": "Haris Wahyudi",
+  "brand": "haris",
+  "site": "https://www.haris.my.id",
+  "seo": {
+    "title": "Haris Wahyudi — Software Engineer",
+    "description": "Full stack software engineer building web, mobile & AI products. 50+ projects shipped, Top 1% freelancer."
+  },
+  "ogImage": "/assets/og-image.png",
+  "footerNote": "made in Indonesia",
   "careerStart": 2020,
   "roles": [
     "Software Engineer",

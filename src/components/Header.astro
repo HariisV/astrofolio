@@ -5,7 +5,7 @@ const links = [['About', '#about'], ['Journey', '#experience'], ['Education', '#
 ---
 <header class="header">
   <nav class="wrap">
-    <a href="#about" class="brand">haris<span>_</span></a>
+    <a href="#about" class="brand">{profile.brand}<span>_</span></a>
     <div class="nav-links" data-spy>{links.map(([l, h]) => <a href={h}>{l}</a>)}<span class="nav-caret" aria-hidden="true">_</span></div>
     <div class="nav-actions">
       <a class="icon-btn" href={profile.social.github} target="_blank" rel="noopener" aria-label="GitHub"><Icon name="github" /></a>

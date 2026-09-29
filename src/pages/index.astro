@@ -12,7 +12,7 @@ import Testimonials from '../components/Testimonials.astro';
 import Contact from '../components/Contact.astro';
 import profile from '../data/profile.json';
 ---
-<Base title="Haris Wahyudi — Software Engineer" description="Full stack software engineer building web, mobile & AI products. 50+ projects shipped, Top 1% freelancer.">
+<Base title={profile.seo.title} description={profile.seo.description}>
   <Loader />
   <Header />
   <main>
