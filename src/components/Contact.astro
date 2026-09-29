@@ -15,7 +15,7 @@ import profile from '../data/profile.json';
   </div>
 
   <div class="wrap"><div class="foot__bar">
-    <small>© {new Date().getFullYear()} {profile.name} · {profile.footerNote}</small>
+    <small>© {new Date().getFullYear()} {profile.name} · {profile.footerNote}{profile.credit && <> · <a class="foot__credit" href={profile.credit.url} target="_blank" rel="noopener">{profile.credit.text}</a></>}</small>
     <a href="#about" class="foot__top">Back to top <Icon name="chevron" /></a>
   </div></div>
 </footer>
